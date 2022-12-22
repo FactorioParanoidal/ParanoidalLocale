@@ -4,14 +4,13 @@ using System.IO;
 using System.Linq;
 using System.Text.Encodings.Web;
 using System.Text.Json;
-using System.Text.Unicode;
 using FactorioLocaleSync.Library;
 using FactorioLocaleSync.Library.Mods;
 using NuGet.Packaging;
 using Nuke.Common.IO;
 using Serilog;
 public static class ModLocalizationUtils {
-    static readonly JavaScriptEncoder CyrillicEncoder = JavaScriptEncoder.Create(UnicodeRanges.BasicLatin, UnicodeRanges.Cyrillic);
+    static readonly JsonSerializerOptions JsonSerializerOptions = new() { WriteIndented = true, Encoder = JavaScriptEncoder.UnsafeRelaxedJsonEscaping };
     public static IEnumerable<ModLocale> ProcessModsToGetLocalizable(IEnumerable<ModInfo> mods, string targetLanguage, ILogger? logger)
         => mods.ToDictionary(info => info, info => GetDefaultLocale(info, targetLanguage, logger))
             .Where(pair => pair.Value != null)
@@ -56,7 +55,7 @@ public static class ModLocalizationUtils {
 
     public static void WriteModInitialLocaleFile(ModLocaleFile file, AbsolutePath path, ILogger? logger) {
         var filePath = file.GetTargetPath(path);
-        var content = JsonSerializer.Serialize(file.GetContent(), new JsonSerializerOptions() { WriteIndented = true });
+        var content = JsonSerializer.Serialize(file.GetContent(), JsonSerializerOptions);
         File.WriteAllText(filePath, content);
         logger?.Debug("Mod {ModName}, file {FileName}, with {LocaleName} written to {FilePath}", file.Locale.Mod.Name, file.FileName, file.Locale.LocaleName, filePath);
     }
@@ -66,7 +65,7 @@ public static class ModLocalizationUtils {
             ? JsonSerializer.Deserialize<HashSet<string>>(File.ReadAllText(path))
             : new HashSet<string>();
         dependencies.AddRange(mods.Select(info => info.InternalName));
-        File.WriteAllText(path, JsonSerializer.Serialize(dependencies, new JsonSerializerOptions() { WriteIndented = true }));
+        File.WriteAllText(path, JsonSerializer.Serialize(dependencies, JsonSerializerOptions));
     }
 
     public static void AppendAlreadyLocalizedContent(IEnumerable<ModInfo> mods, IEnumerable<ModLocale> initialLocales, AbsolutePath targetLocalePath, string targetLocale, ILogger? logger) {
@@ -100,7 +99,7 @@ public static class ModLocalizationUtils {
             }
         }
 
-        var content = JsonSerializer.Serialize(localeDictionary, new JsonSerializerOptions() { WriteIndented = true, Encoder = CyrillicEncoder });
+        var content = JsonSerializer.Serialize(localeDictionary, JsonSerializerOptions);
         File.WriteAllText(filePath, content);
     }
 }
