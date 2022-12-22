@@ -27,6 +27,6 @@
     "wood-bricks": "Хорошо обработанный источник топлива с низкими выбросами",
     "wood-charcoal": "Provides more energy than __ITEM__coal__ while emitting far less pollution. Unfortunately, it's not as versatilely usable, so you will still need __ITEM__coal__!",
     "wood": "Base your energy production on this renewable resource!\\nPlease note: There's a lot more you can use it for than just burning it!",
-    "sand": "__ITEM__sand__"
+    "sand": ""
   }
 }
