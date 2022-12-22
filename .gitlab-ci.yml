@@ -9,8 +9,8 @@ stages:
   - updateLocalesJson
 
 update-locales-files:
-  rules:
-    - when: manual
+  only: 
+    - schedules
   cache:
     key: update-locales-files
     paths:
