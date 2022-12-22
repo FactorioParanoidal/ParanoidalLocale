@@ -1,0 +1,3 @@
+files:
+  - source: /ParanoidalLocale.Data/locale/initial/*.json
+    translation: /ParanoidalLocale.Data/locale/%two_letters_code%/%original_file_name%
