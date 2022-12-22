@@ -1,12 +1,12 @@
 {
   "entity-description": {
     "bi-bio-farm": "Биоферма, превращает саженцы в древесину. Потребляет больше электричества ночью",
-    "bi-bio-garden": "Биосад собирает воздух и убирает загрязнение. (-45 PU)",
+    "bi-bio-garden": "__ENTITY__bi-bio-garden__ очищает воздух от загрязнения. (Один биосад может поглотить 45 единиц загрязнения в секунду — это как 1500 деревьев!)",
     "bi-bio-greenhouse": "Используйте теплицу для роста саженцев",
     "seedling": "Молодое растение, идеально для посадки. Вы также можете посадить его в землю и оно вырастет в дерево. Помните, что сначала нужно удобрить землю, чтобы увеличить шанс роста.",
-    "bi-bio-reactor": "Использует продвинутые биореакции",
-    "bi-cokery": "Переработка дерева в уголь или другие виды топлива",
-    "bi-stone-crusher": "Машина которая измельчает камни",
+    "bi-bio-reactor": "__ENTITY__bi-bio-reactor__ используется для того, что бы производить и перерабатывать биомассу.",
+    "bi-cokery": "__ITEM__wood__ и __ITEM__bi-woodpulp__ перерабатываются в __ITEM__wood-charcoal__ и другие виды топлива в __ENTITY__bi-cokery__.",
+    "bi-stone-crusher": "Эти машины дробят __ITEM__stone__ и __ITEM__concrete__ во всех формах.",
     "bi-bio-accumulator": "Может хранить огромное количество энергии, потому что размер имеет значение...",
     "bi-bio-boiler": "Высокоэффективный бойлер",
     "bi-bio-solar-farm": "Сохраняет пространство, соединяя ваши солнечный панели в компактный блок. Создает много энергии!",
@@ -26,7 +26,7 @@
     "bi-wooden-chest-huge": "Больше среднего деревянный ящик",
     "bi-wooden-chest-large": "Обычный средний деревянный ящик",
     "bi-wooden-fence": "Защитная стена сделанная из дерева",
-    "bi-wooden-pole-big": "Большой деревянный столб ЛЭП. Будет автоматически восстанавливать здоровье, если вы играете с NE Enemies",
+    "bi-wooden-pole-big": "__ENTITY__bi-wooden-pole-big__ будут исцеляться автоматически при использовании \"Natural Evolution Enemies\".",
     "bi-wooden-pole-bigger": "__ENTITY__bi-wooden-pole-bigger__s will be automatically healed if you use \"Natural Evolution Enemies\".",
     "bi-wooden-pole-huge": "Электрический столб, который может охватить огромное расстояние - 64",
     "bi-stone-crusher-sand": "These machines produce __ITEM__stone-crushed__ from __ITEM__stone__ and __ITEM__concrete__ in all forms. They can also refine __ITEM__stone-crushed__ to __ITEM__sand__."
