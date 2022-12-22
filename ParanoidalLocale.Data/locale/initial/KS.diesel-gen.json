@@ -1,0 +1,17 @@
+{
+  "item-name": {
+    "petroleum-generator": "Diesel Generator"
+  },
+  "entity-name": {
+    "petroleum-generator": "Diesel Generator"
+  },
+  "technology-name": {
+    "petroleum-generator": "Diesel Generator"
+  },
+  "recipe-name": {
+    "diesel-fuel": "Diesel Fuel"
+  },
+  "fluid-name": {
+    "diesel-fuel": "Diesel Fuel"
+  }
+}
