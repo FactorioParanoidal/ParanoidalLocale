@@ -3,10 +3,10 @@
     "fertilizer": "Common fertilizer lets stuff grow faster and is also used to produce Algae biomass."
   },
   "item-description": {
-    "bi-adv-fertilizer": "Улучшенное Удобрение для ещё более быстрого выращивания, либо изменения качества поверхности",
-    "fertilizer": "Удобрения нужны для быстрого выращивания растений и изменения качества почвы на более плодородную",
+    "bi-adv-fertilizer": "__ITEM__bi-adv-fertilizer_— специальный ингредиент для еще более быстрого выращивания, либо изменения качества поверхности. Доступно только для пользователей Bio Industries! :-)",
+    "fertilizer": "__ITEM__fertilizer__ позволяет расти быстрее и также используется для производства биомассы водорослей.",
     "bi-purified-air": "Чистый воздух, загрязнение удаляется!",
-    "bi-seed": "Семена, чтобы выращивать из них саженцы",
+    "bi-seed": "Это вырастет в __ENTITY__seedling__.",
     "bi-bio-cannon-basic-ammo": "Ракетная мощь, низкий физический урон",
     "bi-bio-cannon-biological-ammo": "Ракетная мощь, высокий биологический урон",
     "bi-bio-cannon-poison-ammo": "Ракетная мощь, средний урон ядом",
@@ -27,6 +27,6 @@
     "wood-bricks": "Хорошо обработанный источник топлива с низкими выбросами",
     "wood-charcoal": "Provides more energy than __ITEM__coal__ while emitting far less pollution. Unfortunately, it's not as versatilely usable, so you will still need __ITEM__coal__!",
     "wood": "Base your energy production on this renewable resource!\\nPlease note: There's a lot more you can use it for than just burning it!",
-    "sand": "__ITEM__sand__"
+    "sand": ""
   }
 }

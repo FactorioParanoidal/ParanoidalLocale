@@ -1,43 +1,18 @@
 {
-  "entity-name": {
-    "ltn-provider-reader": "Просмотр содержимого Станции снабжения",
-    "ltn-requester-reader": "Просмотр содержимого Станции запроса",
-    "ltn-delivery-reader": "Просмотр содержимого доставки",
-    "ltn-combinator": "LTN Комбинатор"
-  },
-  "item-name": {
-    "ltn-provider-reader": "__ENTITY__ltn-provider-reader",
-    "ltn-requester-reader": "__ENTITY__ltn-requester-reader",
-    "ltn-delivery-reader": "__ENTITY__ltn-delivery-reader",
-    "ltn-combinator": "__ENTITY__ltn-combinator__"
-  },
-  "mod-setting-name": {
-    "ltn_content_reader_update_interval": "Интервал обновления (тиков)",
-    "suppress-custom-gui": "Отключить мод при несовпадении версий",
-    "high-provide-threshold": "Большой порог снабжения для станции запроса",
-    "provide-type": "Тип снабжения/запроса",
-    "show-ltn-network-id": "Показывать идентификатор сети",
-    "show-ltn-priorities": "Показывать приоритеты",
-    "show-ltn-train-length": "Показывать мин/макс длину поезда",
-    "show-ltn-max-trains": "Показывать предел поездов на станцию",
-    "show-ltn-locked-slots": "Показывать кол-во заблокированных ячеек в вагоне",
-    "show-ltn-disable-warnings": "Показывать \"Отключить предупреждения\"",
-    "ltnc-upgradable": "Можно обновить из Постоянного комбинатора"
-  },
-  "mod-setting-description": {
-    "ltn_content_reader_update_interval": "Насколько часто обновляются выходы комбинатора.\\nПо умолчанию = 120",
-    "suppress-custom-gui": "Если обновление мода Logistic Train Network вызовет конфликт с LTN Combinator, включите этот параметр, чтобы перейти на стандартный интерфейс для постоянных комбинаторов.",
-    "high-provide-threshold": "Автоматически устанавливать большой порог снабжения для станций запроса. Это предотвратит загрузку предметов на станции запроса.",
-    "ltnc-upgradable": "Включить обновление постоянных комбинаторов. По умолчанию планировщик обновлений помечает постоянные комбинаторы для обновления до LTN Комбинаторов.\\n\\nЭто не влияет на быстрое обновление.\\n\\n[color=blue]По умолчанию:[/color] [color=green]Выкл[/color]"
-  },
   "mod-name": {
     "LTN_Combinator": "LTN Комбинатор"
   },
   "mod-description": {
     "LTN_Combinator": "Предоставляет отдельный интерфейс для постоянных комбинаторов для лёгкого управления станциями в сети Logistic Train Network."
   },
+  "entity-name": {
+    "ltn-combinator": "LTN Комбинатор"
+  },
   "entity-description": {
     "ltn-combinator": "Отправляет управляющие сигналы для использования на Логистической станции"
+  },
+  "item-name": {
+    "ltn-combinator": "__ENTITY__ltn-combinator__"
   },
   "recipe-name": {
     "ltn-combinator": "__ENTITY__ltn-combinator__"
@@ -56,6 +31,30 @@
     "ltnc-off": "Выкл",
     "ltnc-all": "Все",
     "ltnc-none": "Ничего"
+  },
+  "mod-setting-name": {
+    "suppress-custom-gui": "Отключить мод при несовпадении версий",
+    "high-provide-threshold": "Большой порог снабжения для станции запроса",
+    "provide-type": "Тип снабжения/запроса",
+    "show-ltn-network-id": "Показывать идентификатор сети",
+    "show-ltn-priorities": "Показывать приоритеты",
+    "show-ltn-train-length": "Показывать мин/макс длину поезда",
+    "show-ltn-max-trains": "Показывать предел поездов на станцию",
+    "show-ltn-locked-slots": "Показывать кол-во заблокированных ячеек в вагоне",
+    "show-ltn-disable-warnings": "Показывать \"Отключить предупреждения\"",
+    "ltnc-upgradable": "Можно обновить из Постоянного комбинатора"
+  },
+  "mod-setting-description": {
+    "suppress-custom-gui": "Если обновление мода Logistic Train Network вызовет конфликт с LTN Combinator, включите этот параметр, чтобы перейти на стандартный интерфейс для постоянных комбинаторов.",
+    "high-provide-threshold": "Автоматически устанавливать большой порог снабжения для станций запроса. Это предотвратит загрузку предметов на станции запроса.",
+    "provide-type": "",
+    "show-ltn-network-id": "",
+    "show-ltn-priorities": "",
+    "show-ltn-train-length": "",
+    "show-ltn-max-trains": "",
+    "show-ltn-locked-slots": "",
+    "show-ltn-disable-warnings": "",
+    "ltnc-upgradable": ""
   },
   "string-mod-setting": {
     "provide-type-only-item-count": "Порог по количеству предметов",
