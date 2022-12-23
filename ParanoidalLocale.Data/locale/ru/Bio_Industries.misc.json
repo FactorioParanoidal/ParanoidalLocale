@@ -1,9 +1,9 @@
 {
   "fluid-name": {
     "bi-biomass": "Биомасса из водорослей",
-    "liquid-air": "Сжиженный воздух",
+    "liquid-air": "Сжатый воздух",
     "nitrogen": "Азот",
-    "water-saline": "Солёная вода",
+    "water-saline": "Соленая вода",
     "bi-fertilizer-fluid": "Liquid __ITEM__fertilizer__",
     "bi-adv-fertilizer-fluid": "Liquid __ITEM__bi-adv-fertilizer__"
   },
@@ -23,7 +23,7 @@
   },
   "damage-type-name": {
     "Biological": "Биологический",
-    "bob-pierce": "Бронебойный"
+    "bob-pierce": "Проникающий"
   },
   "modifier-description": {
     "Bio_Turret_Ammo-damage-bonus": "Бонус урона боеприпаса дротиковой турели: +__1__",

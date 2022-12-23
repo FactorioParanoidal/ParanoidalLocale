@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text.Json.Nodes;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace FactorioLocaleSync.Library.Mods;
 
 public record ModInfo(string ModFolder) : ICacheHolder {
     private Dictionary<string, ModLocale>? _locales;
-    public string Name => Path.GetFileName(ModFolder).Split('_').First();
+    public string Name => Regex.Replace(Path.GetFileName(ModFolder), @"_[0-9.]+$", "");
 
     public string InternalName => GetModInfo()["name"]!.GetValue<string>();
 
