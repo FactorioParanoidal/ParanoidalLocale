@@ -31,8 +31,8 @@
             "TeamCity",
             "Terminal",
             "TravisCI",
-            "VisualStudio",
-            "VSCode"
+            "VSCode",
+            "VisualStudio"
           ]
         },
         "LocalizationsFolder": {
