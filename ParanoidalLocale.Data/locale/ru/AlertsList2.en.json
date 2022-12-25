@@ -1,4 +1,8 @@
 {
-  "gui-alerts-list": {},
-  "tooltip-alerts-list": {}
+  "gui-alerts-list": {
+    "label-caption": "Тревоги"
+  },
+  "tooltip-alerts-list": {
+    "label-caption": "Список активных предупреждений"
+  }
 }
