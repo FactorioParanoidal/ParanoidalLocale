@@ -6,7 +6,7 @@ using Nuke.Common;
 using Nuke.Common.IO;
 using Nuke.Common.Tools.Git;
 using Serilog;
-class Build : NukeBuild {
+partial class Build : NukeBuild {
     [Parameter("Path, where paranoidal should be located")]
     readonly AbsolutePath LocalizationsFolder = RootDirectory / "ParanoidalLocale.Data" / "locale";
 
@@ -60,6 +60,49 @@ class Build : NukeBuild {
             var targetLocalizationsFolder = LocalizationsFolder / TargetLocale;
             Log.Information("Appending already localized string to target localizations in {TargetFolder}.", targetLocalizationsFolder);
             ModLocalizationUtils.AppendAlreadyLocalizedContent(modInfos, modLocalesToProcess, targetLocalizationsFolder, TargetLocale, Log.Logger);
+        });
+
+    Target UpdateAndPackMod => _ => _
+        .Executes(() =>
+        {
+            var modDirectory = RootDirectory / "ParanoidalLocale";
+            var targetLocaleDirectory = modDirectory / "locale" / TargetLocale;
+            var oldLocalesHash = FileSystemTasks.GetDirectoryHash(targetLocaleDirectory);
+            Log.Information("Old locales hash: {OldLocalesHash}", oldLocalesHash);
+            
+            FileSystemTasks.EnsureCleanDirectory(targetLocaleDirectory);
+            Log.Information("Writing files content to {TargetFolder}.", targetLocaleDirectory);
+            var fromDirectory = LocalizationsFolder / TargetLocale;
+            ModLocalizationUtils.ExportDictionaryJsonsToFactorioCfg(fromDirectory, targetLocaleDirectory, Log.Logger);
+            
+            var newLocalesHash = FileSystemTasks.GetDirectoryHash(targetLocaleDirectory);
+            Log.Information("Old locales hash: {OldLocalesHash}", oldLocalesHash);
+
+            var dependenciesJsonPath = LocalizationsFolder / "dependencies.json";
+            var dependencies = ModMetaInfoUtils.GetAndProcessDependencies(dependenciesJsonPath).ToList();
+            Log.Information("Found {DependenciesCount} dependencies, including the base game", dependencies.Count);
+
+            var infoJsonPath = modDirectory / "info.json";
+            var infoJson = ModInfoJson.FromFile(infoJsonPath);
+            if (oldLocalesHash != newLocalesHash) {
+                var newVersion = new Version(infoJson.Version.Major, infoJson.Version.Minor, infoJson.Version.Build + 1);
+                Log.Information("Locales changed, bumping version from {OldVersion} to {NewVersion}", infoJson.Version, newVersion);
+                infoJson.Version = newVersion;
+            }
+            
+            Log.Information("Old dependencies count: {DependenciesCount}", infoJson.Dependencies!.Count);
+            if (infoJson.Dependencies!.Count != dependencies.Count) {
+                var newVersion = new Version(infoJson.Version.Major, infoJson.Version.Minor + 1, 0);
+                Log.Information("Dependencies count changed, bumping version from {oldVersion} to {newVersion}", infoJson.Version, newVersion);
+                infoJson.Version = newVersion;
+            }
+            infoJson.Dependencies = dependencies;
+            infoJson.WriteToFile(infoJsonPath);
+            Log.Information("Updated {InfoJsonPath}", infoJsonPath);
+            
+            var modZipPath = TemporaryDirectory / $"ParanoidalLocale_{infoJson.Version}.zip";
+            Log.Information("Packing mod to {ModZipPath}", modZipPath);
+            Zip(modZipPath, modDirectory);
         });
 
     /// Support plugins are available for:

@@ -103,4 +103,34 @@ public static class ModLocalizationUtils {
         var content = JsonSerializer.Serialize(localeDictionary, JsonSerializerOptions);
         File.WriteAllText(filePath, content);
     }
+    
+    public static void ExportDictionaryJsonsToFactorioCfg(AbsolutePath fromDirectory, AbsolutePath targetLocaleDirectory, ILogger? logger) {
+        foreach (var fromFile in fromDirectory.GlobFiles("*.json")) {
+            var fromText = File.ReadAllText(fromFile);
+            var dictionary = JsonSerializer.Deserialize<IDictionary<string, IDictionary<string, string>>>(fromText)!;
+            var fromFileNameWithoutExtension = targetLocaleDirectory / fromFile.NameWithoutExtension + ".cfg";
+
+            var keysCount = dictionary.Sum(x => x.Value.Count);
+            if (keysCount == 0) {
+                logger?.Debug("Skipping {FilePath} because it has no localized keys", fromFile);
+                continue;
+            }
+            logger?.Debug("Writing {FileName} with {SectionsCount} sections and {KeysCount} keys", fromFileNameWithoutExtension, dictionary.Count, keysCount);
+            ExportDictionaryToCfgFile(dictionary, fromFileNameWithoutExtension);
+        }
+    }
+
+    public static void ExportDictionaryToCfgFile(IDictionary<string, IDictionary<string, string>> dictionary, string filePath) {
+        var sb = new StringBuilder();
+        foreach (var (sectionKey, sectionContent) in dictionary) {
+            if (sectionContent.Count == 0) continue;
+            sb.AppendLine($"[{sectionKey}]");
+            foreach (var (localeKey, localeValue) in sectionContent) {
+                sb.AppendLine($"{localeKey}={localeValue.ReplaceLineEndings("\\n")}");
+            }
+            sb.AppendLine();
+        }
+
+        File.WriteAllText(filePath, sb.ToString());
+    }
 }

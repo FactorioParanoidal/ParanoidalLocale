@@ -5,8 +5,13 @@ using System.Collections.Immutable;
 using System.Diagnostics.CodeAnalysis;
 using System.IO;
 using System.Linq;
+using System.Text.Encodings.Web;
+using System.Text.Json;
+using System.Text.Json.Serialization;
 using FactorioLocaleSync.Library.Mods;
 public static class ExtensionMethods {
+    static readonly JsonSerializerOptions JsonSerializerOptions = new() { WriteIndented = true, Encoder = JavaScriptEncoder.UnsafeRelaxedJsonEscaping, DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull };
+
     [return: NotNullIfNotNull("defaultValue")]
     public static TValue GetValueOrDefault<TKey, TValue>(this IReadOnlyDictionary<TKey, TValue>? dictionary, TKey key, TValue defaultValue = default) where TKey : notnull {
         if (dictionary == null) return defaultValue;
@@ -26,4 +31,9 @@ public static class ExtensionMethods {
 
     public static string GetTargetPath(this ModLocaleFile file, string directory)
         => Path.Combine(directory, $"{file.Locale.Mod.Name}.{Path.GetFileNameWithoutExtension(file.FileName)}.json");
+    
+    public static void WriteToFile(this ModInfoJson infoJson, string path){
+        var json = JsonSerializer.Serialize(infoJson, JsonSerializerOptions);
+        File.WriteAllText(path, json);
+    }
 }

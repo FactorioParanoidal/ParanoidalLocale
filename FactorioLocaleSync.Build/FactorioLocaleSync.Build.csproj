@@ -4,6 +4,7 @@
     <OutputType>Exe</OutputType>
     <TargetFramework>net6.0</TargetFramework>
     <RootNamespace></RootNamespace>
+    <Nullable>enable</Nullable>
     <NoWarn>CS0649;CS0169</NoWarn>
     <NukeRootDirectory>..</NukeRootDirectory>
     <NukeScriptDirectory>..</NukeScriptDirectory>
@@ -11,26 +12,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Ignis.Nuke.GitLab" Version="0.3.1-alpha0001"/>
-    <PackageReference Include="Nuke.Common" Version="6.3.0"/>
+    <PackageReference Include="Nuke.Common" Version="6.3.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\FactorioLocaleSync.Library\FactorioLocaleSync.Library.csproj"/>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Compile Remove="Directory.Build\**"/>
-    <Compile Remove="logs\**"/>
-  </ItemGroup>
-
-  <ItemGroup>
-    <EmbeddedResource Remove="Directory.Build\**"/>
-    <EmbeddedResource Remove="logs\**"/>
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Remove="Directory.Build\**"/>
-    <None Remove="logs\**"/>
+    <ProjectReference Include="..\FactorioLocaleSync.Library\FactorioLocaleSync.Library.csproj" />
   </ItemGroup>
 </Project>
