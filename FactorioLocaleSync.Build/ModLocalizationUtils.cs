@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Text;
 using System.Text.Encodings.Web;
 using System.Text.Json;
 using FactorioLocaleSync.Library;
@@ -64,7 +65,7 @@ public static class ModLocalizationUtils {
         var dependencies = path.Exists()
             ? JsonSerializer.Deserialize<HashSet<string>>(File.ReadAllText(path))
             : new HashSet<string>();
-        dependencies.AddRange(mods.Select(info => info.InternalName));
+        dependencies.AddRange(mods.Select(info => info.InfoJson.InternalName));
         File.WriteAllText(path, JsonSerializer.Serialize(dependencies, JsonSerializerOptions));
     }
 
