@@ -73,7 +73,8 @@
             "type": "string",
             "enum": [
               "CloneParanoidalRepository",
-              "ExtractLocalizationToJsons"
+              "ExtractLocalizationToJsons",
+              "UpdateAndPackMod"
             ]
           }
         },
@@ -84,7 +85,8 @@
             "type": "string",
             "enum": [
               "CloneParanoidalRepository",
-              "ExtractLocalizationToJsons"
+              "ExtractLocalizationToJsons",
+              "UpdateAndPackMod"
             ]
           }
         },
