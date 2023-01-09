@@ -250,7 +250,8 @@
     "valve-underflow": "Клапан дозаправки",
     "angels-electric-boiler": "Электро-бойлер",
     "angels-electric-boiler-2": "Электро-бойлер МК2",
-    "angels-electric-boiler-3": "Электро-бойлер МК3"
+    "angels-electric-boiler-3": "Электро-бойлер МК3",
+    "angels-air-filter-3": "Компрессорная станция MK3"
   },
   "entity-description": {
     "angels-flare-stack": "Сжигает избыточные газообразные химические вещества с выбросом продуктов в атмосферу",
