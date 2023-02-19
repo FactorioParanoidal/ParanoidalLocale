@@ -21,11 +21,5 @@
   },
   "controls": {
     "kap-bbr-cycle-key": "replace rails in Blueprint"
-  },
-  "mod-setting-name": {
-    "beautiful-straight-bridge-railway-limit-max-bridge-length": "Limit max. bridge length"
-  },
-  "mod-setting-description": {
-    "beautiful-straight-bridge-railway-limit-max-bridge-length": "When building longer bridges there will be gaps after this distance."
   }
 }
