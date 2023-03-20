@@ -1,0 +1,6 @@
+{
+  "mod-setting-name": {
+    "BPT-base": "Base pipe throughput",
+    "BPT-per-tier": "Pipe throughput per-tier multiplier"
+  }
+}
