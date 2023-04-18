@@ -7,6 +7,7 @@ variables:
 
 stages:
   - updateLocalesJson
+  - updateAndPackMod
 
 update-locales-files:
   only: 
@@ -21,3 +22,16 @@ update-locales-files:
     - ./build.sh ExtractLocalizationToJsons
     - git config --global user.email 'skproch@yandex.ru'
     - git diff --quiet && git diff --staged --quiet || (git add . && git commit -am 'Updated localization from Factorio Paranoidal mods' --author='SKProCHs Bot <skproch@yandex.ru>' && git push https://paranoidal:$GITLAB_ACCESS_TOKEN@gitlab.com/paranoidal/locale.git main)
+
+update-and-pack-mod:
+  only:
+    - pushes
+  rules:
+    - if: bra
+  stage: updateAndPackMod
+  script:
+    - git checkout --track remotes/origin/$CI_COMMIT_BRANCH
+    - ./build.sh UpdateAndPackMod
+    - git config --global user.email 'skproch@yandex.ru'
+    - git diff --quiet && git diff --staged --quiet || (git add . && git commit -am 'Update ParanoidalLocale mod sources' --author='SKProCHs Bot <skproch@yandex.ru>' && git push https://paranoidal:$GITLAB_ACCESS_TOKEN@gitlab.com/paranoidal/locale.git main)
+    - curl -X POST --fail -F token=$PARANOIDAL_TRIGGER_TOKEN -F ref=master https://gitlab.com/api/v4/projects/17216202/trigger/pipeline
