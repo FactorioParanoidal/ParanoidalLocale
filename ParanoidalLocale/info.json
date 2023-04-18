@@ -1,6 +1,6 @@
 {
   "name": "ParanoidalLocale",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "factorio_version": "1.1",
   "title": "PARANOIDAL Locale",
   "author": "SKProCH",
@@ -137,6 +137,8 @@
     "? DeadlockLargerLamp",
     "? PickerInventoryTools",
     "? angelsbioprocessing",
-    "? DeadlockResearchNotifications"
+    "? DeadlockResearchNotifications",
+    "? TrainSpeeds",
+    "? BobPipesThroughput"
   ]
 }
