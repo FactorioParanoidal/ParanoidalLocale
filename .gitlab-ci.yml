@@ -26,8 +26,6 @@ update-locales-files:
 update-and-pack-mod:
   only:
     - pushes
-  rules:
-    - if: bra
   stage: updateAndPackMod
   script:
     - git checkout --track remotes/origin/$CI_COMMIT_BRANCH
