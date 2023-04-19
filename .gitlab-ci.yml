@@ -24,8 +24,10 @@ update-locales-files:
     - git diff --quiet && git diff --staged --quiet || (git add . && git commit -am 'Updated localization from Factorio Paranoidal mods' --author='SKProCHs Bot <skproch@yandex.ru>' && git push https://paranoidal:$GITLAB_ACCESS_TOKEN@gitlab.com/paranoidal/locale.git main)
 
 update-and-pack-mod:
-  only:
-    - pushes
+  rules:
+    - if: $CI_COMMIT_BRANCH == "main" && $CI_PIPELINE_SOURCE == "push"
+      when: always
+    - when: never
   stage: updateAndPackMod
   script:
     - git checkout --track remotes/origin/$CI_COMMIT_BRANCH
