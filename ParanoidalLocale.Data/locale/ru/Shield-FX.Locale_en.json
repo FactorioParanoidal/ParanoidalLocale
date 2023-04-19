@@ -1,5 +1,11 @@
 {
-  "mod-setting-name": {},
-  "mod-setting-description": {},
-  "mod-description": {}
+  "mod-setting-name": {
+    "SFX_alternate_effect": "Альтернативный визуальный эффект"
+  },
+  "mod-setting-description": {
+    "SFX_alternate_effect": "Заменяет визуальный эффект щита на альтернативную анимированную версию."
+  },
+  "mod-description": {
+    "Shield-FX": "Добавляет визуальный эффект, когда щиты поглощают урон"
+  }
 }
