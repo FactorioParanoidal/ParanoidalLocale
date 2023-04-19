@@ -8,7 +8,7 @@
     "rocket-control-circuit": "Микросхема ракетного контроллера"
   },
   "mod-setting-name": {
-    "coppermine-bob-module-exponential-modules": "Экспотенциально дорожающие модули",
+    "coppermine-bob-module-exponential-modules": "Экспоненциально дорожающие модули",
     "coppermine-bob-module-nerfed-modules": "Понерфеные модули",
     "coppermine-bob-module-expensive-module-combination": "Дорогие комбинированные модули",
     "coppermine-bob-module-nerfed-beacons": "Понерфеные маяки",
@@ -20,8 +20,8 @@
   },
   "mod-setting-description": {
     "coppermine-bob-module-exponential-modules": "Modules of each level now cost 2 modules of the previous level to craft (5 for God modules), making modules exponentially expensive in their level.  The intent is to encourage use of the lower level modules, which are otherwise rarely relevant.",
-    "coppermine-bob-module-nerfed-modules": "The positive effects of the various modules are weakened, and their negative side-effects significantly increased.  In particular, speed (and raw speed) modules no longer make machines more efficient, and productivity (and raw productivity) modules come with severe energy and speed costs.  God modules (if enabled) become what raw productivity modules used to be.",
-    "coppermine-bob-module-expensive-module-combination": "The combined-effect modules require different ingredients, including higher-tier plates.  If Bob's alien alloys are enabled, they will be required.  God modules (if enabled) are now crafted from other modules.",
+    "coppermine-bob-module-nerfed-modules": "Положительные эффекты различных модулей ослаблены, а их отрицательные побочные эффекты значительно усилены.  В частности, модули скорости (и \"сырой\" скорости) больше не делают машины более эффективными, а модули производительности (и \"сырой\" производительности) влекут за собой серьезные затраты энергии и скорости.  Модули Бога (если они включены) становятся тем, чем раньше были модули \"сырой\" производительности.",
+    "coppermine-bob-module-expensive-module-combination": "Модули с комбинированным эффектом требуют различных ингредиентов, включая пластины более высокого уровня.  Если включены инопланетные сплавы Боба, они будут необходимы.  Модули бога (если они включены) теперь создаются из других модулей.",
     "coppermine-bob-module-nerfed-beacons": "Mk2 and mk3 beacons have reduced range and increaed energy cost and hold fewer modules.  They also now generate pollution.",
     "coppermine-bob-module-expensive-beacons": "Mk2 and mk3 beacons require pollution producing modules to craft.  With exponentially expensive modules enabled, this makes them very expensive, meaning that mk1 or mk2 beacons are a sensible choice in many situations.",
     "coppermine-bob-module-modules-in-rocket": "Use either raw speed module 8s (if enabled) or speed module 8s as an ingredient in rocket control units.  If exponential modules are enabled then one module suffices for 20 rocket control units, so that they are not too expensive.",
