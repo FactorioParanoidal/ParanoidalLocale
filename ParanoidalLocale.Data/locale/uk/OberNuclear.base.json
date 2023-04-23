@@ -1,0 +1,12 @@
+{
+  "entity-name": {
+    "nuclear-furnace": "Ядерна піч"
+  },
+  "recipe-name": {
+    "ober-nuclear-oil": "Високотемпературне перероблення нафти"
+  },
+  "technology-name": {
+    "ober-uranium-processing": "Переробка урану",
+    "ober-nuclear-processing": "Високотемпературне рафінування"
+  }
+}
