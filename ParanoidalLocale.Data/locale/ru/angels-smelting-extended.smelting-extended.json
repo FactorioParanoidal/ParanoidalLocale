@@ -13,6 +13,7 @@
     "angels-shielding-coil-gold": "Золотая экранированная катушка",
     "angels-shielding-coil-platinum": "Платиновая экранированная катушка",
     "angels-girder-stack": "Стопка балок",
+    "angels-wire-coil-insulated": "Катушка изолированного провода",
     "ASE-sand-die": "Песочная форма",
     "ASE-spent-metal-die": "Использованная форма литья",
     "ASE-metal-die": "Металлическая матричная подложка"
@@ -32,10 +33,12 @@
     "angels-advanced-crafting": "Литье под давлением __1__"
   },
   "mod-setting-name": {
-    "ASE-angels-coil-icons": "Использовать значки Angels Coil"
+    "ASE-angels-coil-icons": "Использовать значки Angels Coil",
+    "ASE-angels-molten-recipes": "Включить расплавы металлов"
   },
   "mod-setting-description": {
-    "ASE-angels-coil-icons": "Использовать значки Angels Coil вместо соответствующих по цвету катушек (по умолчанию выключено)"
+    "ASE-angels-coil-icons": "Использовать значки Angels Coil вместо соответствующих по цвету катушек (по умолчанию выключено)",
+    "ASE-angels-molten-recipes": "Создаёт рецепты для смешивания расплавов металлов [color=red](default OFF)[/color]"
   },
   "lookup": {
     "iron": "Железная",
