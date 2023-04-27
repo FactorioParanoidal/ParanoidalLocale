@@ -1,0 +1,8 @@
+{
+  "gui-alerts-list": {
+    "label-caption": "Попередження"
+  },
+  "tooltip-alerts-list": {
+    "label-caption": "Список активних попереджень на даний час"
+  }
+}
