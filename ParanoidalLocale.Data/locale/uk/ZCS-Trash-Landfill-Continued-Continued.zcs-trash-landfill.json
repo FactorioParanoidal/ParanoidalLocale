@@ -1,0 +1,17 @@
+{
+  "entity-name": {
+    "zcs-trash-landfill": "Сміттєзвалище"
+  },
+  "item-name": {
+    "zcs-trash-landfill": "Сміттєзвалище"
+  },
+  "item-description": {
+    "zcs-trash-landfill": "Помістіть предмети сюди, і їх кількість повільно зменшуватиметься. Це спричиняє забруднення."
+  },
+  "technology-name": {
+    "zcs-trash-landfill": "Сміттєзвалище"
+  },
+  "technology-description": {
+    "zcs-trash-landfill": "Позбавтеся непотрібних предметів, перетворивши їх у забруднення."
+  }
+}

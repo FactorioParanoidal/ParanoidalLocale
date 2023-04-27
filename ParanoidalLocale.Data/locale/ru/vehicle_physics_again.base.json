@@ -1,4 +1,8 @@
 {
-  "mod-setting-name": {},
-  "mod-setting-description": {}
+  "mod-setting-name": {
+    "vehphy-tiremarks-duration": "Длительность следов шин"
+  },
+  "mod-setting-description": {
+    "vehphy-tiremarks-duration": "Продолжительность в секундах до удаления следов от шин"
+  }
 }
