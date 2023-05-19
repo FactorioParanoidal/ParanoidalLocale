@@ -45,7 +45,10 @@
     "angelsore3-pure-processing": "Сортировка сверхчистого стиратита",
     "angelsore4-pure-processing": "Сортировка сверхчистого кротиниума",
     "angelsore5-pure-processing": "Сортировка сверхчистого рубита",
-    "angelsore6-pure-processing": "Сортировка сверхчистого бобмониума"
+    "angelsore6-pure-processing": "Сортировка сверхчистого бобмониума",
+    "slag_processing_2": "Переработка минерального шлама в __1__ и __2__",
+    "slag_processing_3": "Переработка минерального шлама в __1__, __2__, и __3__",
+    "slag_processing_1": "Переработка минерального шлама в __1__"
   },
   "recipe-description": {},
   "item-group-name": {},
