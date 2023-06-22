@@ -133,5 +133,8 @@
   "TrainSpeeds",
   "BobPipesThroughput",
   "belt-visualizer",
-  "TrainModeSwitcher"
+  "TrainModeSwitcher",
+  "factorio-research-queue",
+  "osha_mini_containers",
+  "extended-descriptions"
 ]
