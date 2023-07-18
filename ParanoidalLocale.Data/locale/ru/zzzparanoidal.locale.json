@@ -25,7 +25,9 @@
     "artillery-turret-prototype": "Прототип артиллерийского орудия",
     "yir_usl": "Локомотив МК0",
     "yir_us_cargo": "Грузовой вагон МК0",
-    "seafloor-pump-placeholder": "Донный насос"
+    "seafloor-pump-placeholder": "Донный насос",
+    "seafloor-pump-2-placeholder": "Донный насос МК2",
+    "seafloor-pump-3-placeholder": "Донный насос МК3"
   },
   "entity-description": {
     "artillery-turret-prototype": "Прототип артиллерии для уничтожения вражеских баз.",
