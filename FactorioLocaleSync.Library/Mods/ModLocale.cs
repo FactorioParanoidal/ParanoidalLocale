@@ -27,7 +27,9 @@ public record ModLocale(ModInfo Mod, string LocaleName) : ICacheHolder {
     public IReadOnlyDictionary<string, IReadOnlyDictionary<string, string>> GetMergedLocalizations() {
         if (_localizationContent != null) return _localizationContent;
 
-        var localizations = Files.Values.Select(file => file.GetContent());
+        var localizations = Files
+            .Where(pair => pair.Key.EndsWith(".cfg"))
+            .Select(file => file.Value.GetContent());
         return _localizationContent = LocalizationProcessor.Merge(localizations);
     }
 }

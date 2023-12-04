@@ -50,7 +50,8 @@ public static class ModLocalizationUtils {
 
     public static void WriteModsInitialLocaleFiles(IEnumerable<ModLocale> modLocales, AbsolutePath path, ILogger? logger) {
         FileSystemTasks.EnsureExistingDirectory(path);
-        var files = modLocales.SelectMany(locale => locale.Files);
+        var files = modLocales.SelectMany(locale => locale.Files)
+            .Where(pair => pair.Key.EndsWith(".cfg"));
         foreach (var file in files) WriteModInitialLocaleFile(file.Value, path, logger);
     }
 
@@ -76,7 +77,8 @@ public static class ModLocalizationUtils {
             .Select(pair => pair.Value.GetMergedLocalizations());
         var mergedLocalizations = LocalizationProcessor.Merge(allLocalizations);
 
-        var files = initialLocales.SelectMany(locale => locale.Files);
+        var files = initialLocales.SelectMany(locale => locale.Files)
+            .Where(pair => pair.Key.EndsWith(".cfg"));
         foreach (var (_, file) in files) {
             logger?.Debug("Appending already localized content to {FilePath}", file.GetTargetPath(targetLocalePath));
             AppendAlreadyLocalizedContentToFile(file, mergedLocalizations, targetLocalePath);
@@ -103,7 +105,7 @@ public static class ModLocalizationUtils {
         var content = JsonSerializer.Serialize(localeDictionary, JsonSerializerOptions);
         File.WriteAllText(filePath, content);
     }
-    
+
     public static void ExportDictionaryJsonsToFactorioCfg(AbsolutePath fromDirectory, AbsolutePath targetLocaleDirectory, ILogger? logger) {
         foreach (var fromFile in fromDirectory.GlobFiles("*.json")) {
             var fromText = File.ReadAllText(fromFile);
