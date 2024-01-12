@@ -5,7 +5,7 @@
   "string": {
     "electric-offshore-pump": "Электрический береговой насос",
     "burner-offshore-pump": "Твердотопливный береговой насос",
-    "water-pumpjack": "Водяной станок-качалка"
+    "water-pumpjack": "Водяной насос"
   },
   "technology-name": {
     "water-pumpjack": "Водяная помпа"
@@ -14,13 +14,13 @@
     "offshore-pump-2": "Лучший береговой насос для воды",
     "offshore-pump-3": "Быстрый береговой насос для воды",
     "offshore-pump-4": "Высокопроизводительный береговой насос для воды",
-    "water-pumpjack": "Начать добычу воды из змели"
+    "water-pumpjack": "Начать добычу воды из земли"
   },
   "mod-setting-name": {
     "osm-pumps-enable-power": "Включить потребление энергии",
     "osm-pumps-power-priority": "Высокий приоритет потребления энергии",
     "osm-pumps-burner-offshore-pump": "Твердотопливный береговой насос",
-    "osm-pumps-enable-ground-water-pumpjacks": "Включить станок-качалку для грунтовых вод",
+    "osm-pumps-enable-ground-water-pumpjacks": "Включить насосы для грунтовой воды",
     "osm-pumps-landfill-goes-boom": "Отсыпка разрушает береговые насосы",
     "osm-pumps-boiler-start-water": "Бойлеры устанавливаются с водой внутри"
   },
