@@ -95,7 +95,9 @@
     "vehicle-roboport": "Дронстанция транспорта",
     "vehicle-roboport-2": "Дронстанция транспорта MK2"
   },
-  "damage-type-name": {},
+  "damage-type-name": {
+    "plasma": "Плазменный"
+  },
   "technology-name": {
     "vehicle-energy-shield-equipment": "Энергощит для транспорта",
     "vehicle-battery-equipment": "Аккумулятор для транспорта",

@@ -8,8 +8,11 @@
     "pv-color-by-fluid": "Цвет по жидкости",
     "pv-color-by-system": "Цвет по системе"
   },
-  "mod-setting-name": {},
+  "mod-setting-name": {
+    "pv-overlay-opacity": "Непрозрачность оверлея"
+  },
   "shortcut-name": {
     "pv-toggle-overlay": "Вкл/выкл визуализатор труб"
-  }
+  },
+  "mod-setting-description": {}
 }

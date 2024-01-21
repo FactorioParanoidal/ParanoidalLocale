@@ -352,7 +352,8 @@
     "angels-cobalt-steel-smelting": "Улучшенное сплавление кобальтовой стали",
     "angels-nitinol-smelting": "Улучшенное сплавление нитинола",
     "steel-mixing-furnace": "Стальная печь для сплавов",
-    "electric-mixing-furnace": "Стальная электропечь для сплавов"
+    "electric-mixing-furnace": "Стальная электропечь для сплавов",
+    "fluid-mixing-furnace": "Жидкотопливная печь для сплавов"
   },
   "technology-description": {
     "angels-metallurgy": "Металлургия",

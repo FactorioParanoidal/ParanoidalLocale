@@ -121,7 +121,12 @@
     "repair-pack-2": "__ITEM__repair-pack__ 2",
     "repair-pack-3": "__ITEM__repair-pack__ 3",
     "repair-pack-4": "__ITEM__repair-pack__ 4",
-    "repair-pack-5": "__ITEM__repair-pack__ 5"
+    "repair-pack-5": "__ITEM__repair-pack__ 5",
+    "heavy-chest": "Тяжелая сундук",
+    "reinforced-chest": "Усиленный сундук",
+    "armoured-rail": "Бронированные рельсы",
+    "iridium-pipe": "Иридиевая труба",
+    "iridium-pipe-to-ground": "Иридиевая подземная труба"
   },
   "fluid-name": {},
   "entity-name": {
@@ -235,10 +240,27 @@
     "bob-pump-3": "Помпа MK3",
     "bob-pump-4": "Помпа MK4",
     "valve": "Клапан",
-    "bob-valve": "__ENTITY__valve__"
+    "bob-valve": "__ENTITY__valve__",
+    "heavy-chest": "Тяжелая сундук",
+    "reinforced-chest": "Усиленный сундук",
+    "steam-inserter": "Паровой манипулятор __ENTITY__inserter__",
+    "ultimate-inserter": "__ITEM__prefix-green__ __ENTITY__inserter__",
+    "ultimate-filter-inserter": "__ITEM__prefix-green__ __ENTITY__filter-inserter__",
+    "ultimate-stack-inserter": "__ITEM__prefix-green__ __ENTITY__stack-inserter__",
+    "ultimate-stack-filter-inserter": "__ITEM__prefix-green__ __ENTITY__stack-filter-inserter__",
+    "aai-basic-loader": "__ITEM__prefix-black__ __ENTITY__loader__",
+    "aai-turbo-loader": "__ITEM__prefix-purple__ __ENTITY__loader__",
+    "aai-ultimate-loader": "__ITEM__prefix-green__ __ENTITY__loader__",
+    "armoured-straight-rail": "Бронированные прямые рельсы",
+    "armoured-curved-rail": "Бронированные изгибные рельсы",
+    "iridium-pipe": "Иридиевая труба",
+    "iridium-pipe-to-ground": "Иридиевая подземная труба",
+    "bob-overflow-valve": "Перепускной клапан",
+    "bob-topup-valve": "Клапан долива"
   },
   "recipe-name": {
-    "bob-valve": "__ITEM__valve__"
+    "bob-valve": "__ITEM__valve__",
+    "bob-oil-processing": "Переработка сырой нефти"
   },
   "technology-name": {
     "bob-robotics": "Улучшенные транспортные и строительные дроны",
@@ -263,7 +285,10 @@
     "inserter-stack-size-bonus": "Бонус грузоподъемности манипулятора",
     "bob-infinite-worker-robots-storage": "Увеличение грузоподъёмности рабочего дрона",
     "bob-infinite-character-logistic-trash-slots": "Увеличение логистических мусорных слотов персонажа",
-    "bob-repair-pack": "__ITEM__repair-pack__"
+    "bob-repair-pack": "__ITEM__repair-pack__",
+    "aai-basic-loader": "Базовый погрузчик",
+    "aai-turbo-loader": "Высокоскоростной погрузчик",
+    "aai-ultimate-loader": "Сверхскоростной погрузчик"
   },
   "technology-description": {
     "bob-robots": "Дроны работники - удобная летающая альтернатива конвейерам.",
@@ -275,9 +300,14 @@
   },
   "item-description": {
     "valve": "Клапан позволяет жидкости перемещаться только в одном направлении",
-    "bob-valve": "Клапан позволяет жидкости перемещаться только в одном направлении"
+    "bob-valve": "Клапан позволяет жидкости перемещаться только в одном направлении",
+    "bob-overflow-valve": "Вентиль пропускающий поток только во одном направлении когда источник наполнен более чем на 80%",
+    "bob-topup-valve": "Вентиль пропускающий поток только во одном направлении когда наполнение целевого резервуара не превышает 20%"
   },
-  "entity-description": {},
+  "entity-description": {
+    "bob-pipe-to-ground": "Длина подземной секции: __1__",
+    "steam-inserter": "Паровой манипулятор может изменять скорость и энергопотребление в зависимости от температуры подведённого пара.\\nФункционирование манипулятора начнётся при обеспечении 20% от номинального потребления."
+  },
   "item-group-name": {
     "bob-logistics": "Логистика Боба"
   },
@@ -310,7 +340,8 @@
     "bobmods-logistics-beltspeedperlevel": "Скорость конвейера каждый уровень",
     "bobmods-logistics-fluidwagonbase": "Базовый размер жидкостного вагона",
     "bobmods-logistics-storagetankbase": "Базовый размер резервуара",
-    "bobmods-logistics-trains": "Поезда"
+    "bobmods-logistics-trains": "Поезда",
+    "bobmods-logistics-highpipes": "Трубы большего размера"
   },
   "mod-setting-description": {
     "bobmods-logistics-flyingrobotframes": "Если установлено значение True, промежуточные основы летающих роботов будут существовать для использования в рецептах.",
@@ -332,7 +363,8 @@
     "bobmods-logistics-beltspeedperlevel": "Устанавливает, как предметы перемещаются по ковейеру каждый уровень, если включены оба параметра капремонта скорости конвейеров.",
     "bobmods-logistics-fluidwagonbase": "Устанавливает количество жидкости, которое может хранить жидкостный вагон, в тысячах (по умолчанию: 25 для 25к)",
     "bobmods-logistics-storagetankbase": "Устанавливает количество жидкости, которое может хранить резервуар, в тысячах (по умолчанию: 25, для 25к)",
-    "bobmods-logistics-trains": "Если установлено значение True, новые поезда (локомотивы и вагоны) будут доступны."
+    "bobmods-logistics-trains": "Если установлено значение True, новые поезда (локомотивы и вагоны) будут доступны.",
+    "bobmods-logistics-highpipes": "Если включено, трубы более высокого уровня имеют большие размеры и большую пропускную способность, но для правильной работы может потребоваться насос."
   },
   "controls": {
     "bob-inserter-long": "Дальность выгрузки и подборки предметов"
