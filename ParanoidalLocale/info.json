@@ -1,6 +1,6 @@
 {
   "name": "ParanoidalLocale",
-  "version": "1.9.2",
+  "version": "1.10.0",
   "factorio_version": "1.1",
   "title": "PARANOIDAL Locale",
   "author": "SKProCH",
@@ -164,6 +164,12 @@
     "? blueprint-sandboxes",
     "? PipeMeterWLK",
     "? StatsGui",
-    "? Bioluminescence"
+    "? Bioluminescence",
+    "? WideChests",
+    "? Milestones",
+    "? Electric_Transformators",
+    "? RampantMaintenance",
+    "? reskins-library",
+    "? pathological"
   ]
 }
