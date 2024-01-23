@@ -78,5 +78,7 @@
     "water-treatment": "Очистка воды",
     "angels-fluid-barreling": "Разливка в бочки",
     "water-washing": "Промывка"
-  }
+  },
+  "cant_insert": {},
+  "tooltip-description": {}
 }

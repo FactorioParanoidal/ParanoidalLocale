@@ -311,7 +311,9 @@
     "angels-plate-invar": "Инварный слиток",
     "angels-plate-cobalt-steel": "Кобальтово-стальной слиток",
     "angels-plate-nitinol": "Нитиноловый слиток",
-    "thorium-ore": "Ториевая руда"
+    "thorium-ore": "Ториевая руда",
+    "copper-cable": "Медный провод",
+    "gilded-copper-cable": "Позолоченный медный провод"
   },
   "item-description": {
     "loc-bauxite": "Бокситы",
@@ -353,7 +355,9 @@
     "angels-nitinol-smelting": "Улучшенное сплавление нитинола",
     "steel-mixing-furnace": "Стальная печь для сплавов",
     "electric-mixing-furnace": "Стальная электропечь для сплавов",
-    "fluid-mixing-furnace": "Жидкотопливная печь для сплавов"
+    "fluid-mixing-furnace": "Жидкотопливная печь для сплавов",
+    "alloy-processing": "Изготовление сплавов",
+    "zinc-processing": "Производство цинка"
   },
   "technology-description": {
     "angels-metallurgy": "Металлургия",
@@ -388,7 +392,8 @@
     "angels-gunmetal-smelting": "Улучшенное сплавление пушечной бронзы",
     "angels-invar-smelting": "Улучшенное сплавление инвара",
     "angels-cobalt-steel-smelting": "Улучшенное сплавление кобальтовой стали",
-    "angels-nitinol-smelting": "Улучшенное сплавление нитинола"
+    "angels-nitinol-smelting": "Улучшенное сплавление нитинола",
+    "alloy-processing": "Исследование возможности смешивания металлов для создания сплавов."
   },
   "tile-name": {
     "clay-bricks": "Глиняные кирпичи"

@@ -34,7 +34,8 @@
     "WideChests_warehouse-threshold": "Порог размера для свалки",
     "WideChests_whitelist-chest-sizes": "Допустимые размеры сундуков",
     "WideChests_circuit-connector-position": "Circuit connection position (translate please)",
-    "WideChests_allow-delete-items": "Allow void items (translate please)"
+    "WideChests_allow-delete-items": "Allow void items (translate please)",
+    "WideChests_mirror-whitelists": "Mirror whitelist setting (translate please)"
   },
   "mod-setting-description": {
     "WideChests_max-chest-width": "Максимальная ширина объединненого сундука. Установите мод WideChestsUnlimited если хотите установить лимит больше 42.",
@@ -46,7 +47,8 @@
     "WideChests_warehouse-threshold": "Свалка будет использоваться вместо складов с шириной И высотой больше X.",
     "WideChests_whitelist-chest-sizes": "Набор пар формата ШxВ (разделенных пробелом) где Ш и В целые числа либо большая буква N (означающая любое число).",
     "WideChests_circuit-connector-position": "Specifies where the circuit connector will be placed on the merged chests. (translate please)",
-    "WideChests_allow-delete-items": "Allows deleting items during merging or splitting of chests. (translate please)"
+    "WideChests_allow-delete-items": "Allows deleting items during merging or splitting of chests. (translate please)",
+    "WideChests_mirror-whitelists": "When enabled you don't have to specify both \"AxB\" and \"BxA\". Either one of them will work as both of them. (translate please)"
   },
   "string-mod-setting": {
     "WideChests_mergeable-chest-wooden-chest-warehouse": "Chest and warehouse (translate please)",

@@ -43,7 +43,8 @@
     "coolant-cool-100": "Cooling from 100°",
     "coolant-cool-200": "Cooling from 200°",
     "coolant-cool-300": "Cooling from 300°",
-    "mold-non-expendable-wash": "Reusable mold cleaning"
+    "mold-non-expendable-wash": "Reusable mold cleaning",
+    "solid-iron-hydroxide-smelting": "__ITEM__solid-iron-hydroxide__ recycling"
   },
   "item-group-name": {
     "angels-smelting": "Metallurgy smelting",
@@ -172,6 +173,7 @@
     "powder-copper": "Copper powder",
     "angels-plate-copper": "Copper plate",
     "angels-wire-copper": "Copper wire",
+    "copper-cable": "Copper wire",
     "angels-wire-coil-copper": "Copper wire coil",
     "angels-roll-copper": "Copper sheet coil",
     "solid-glass-mixture": "Glass mixture",
@@ -188,6 +190,7 @@
     "angels-roll-gold": "Gold sheet coil",
     "angels-wire-gold": "Gold wire",
     "angels-wire-coil-gold": "Gold wire coil",
+    "gilded-copper-cable": "__ITEM__angels-wire-gold__",
     "processed-iron": "Processed iron",
     "pellet-iron": "Iron pellet",
     "solid-iron-hydroxide": "Iron hydroxide",
@@ -393,7 +396,9 @@
     "fluid-mixing-furnace": "Fluid burning filtering furnace",
     "electric-mixing-furnace": "Electric filtering furnace 1",
     "angels-multi-purpose-furnace-1": "Electric filtering furnace 2",
-    "angels-multi-purpose-furnace-2": "Electric filtering furnace 3"
+    "angels-multi-purpose-furnace-2": "Electric filtering furnace 3",
+    "alloy-processing": "Bronze processing",
+    "zinc-processing": "Brass processing"
   },
   "technology-description": {
     "angels-metallurgy": "Machines for advanced metallurgical smelting.",
@@ -460,7 +465,8 @@
     "angels-gunmetal-smelting": "Advanced processing steps for the production of gunmetal.",
     "angels-invar-smelting": "Advanced processing steps for the production of invar.",
     "angels-cobalt-steel-smelting": "Advanced processing steps for the production of cobalt steel.",
-    "angels-nitinol-smelting": "Advanced processing steps for the production of nitinol."
+    "angels-nitinol-smelting": "Advanced processing steps for the production of nitinol.",
+    "alloy-processing": ""
   },
   "tile-name": {
     "clay-bricks": "Clay path",
