@@ -1,0 +1,29 @@
+name: Pack mod with new translations
+
+env:
+  DOTNET_SYSTEM_GLOBALIZATION_INVARIANT: 1
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  update-and-pack-mod:
+    runs-on: ubuntu-latest
+    container:
+      image: mcr.microsoft.com/dotnet/sdk:10.0
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Update and pack mod
+        run: ./build.sh UpdateAndPackMod
+
+      - name: Commit and push if changed
+        run: |
+          git config --global user.email 'skproch@yandex.ru'
+          git config --global user.name 'SKProCHs Bot'
+          git diff --quiet && git diff --staged --quiet || (git add . && git commit -am 'Update ParanoidalLocale mod sources' && git push)
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
