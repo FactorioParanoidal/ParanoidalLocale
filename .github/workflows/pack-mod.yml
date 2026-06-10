@@ -83,6 +83,9 @@ jobs:
       - name: Update mod folder in modpack
         if: steps.commit.outputs.changed == 'true'
         run: |
+          git -C modpack config core.autocrlf false
+          printf '* -text\n' > modpack/.git/info/attributes
+          git -C modpack checkout -- .
           rm -rf modpack/mods/ParanoidalLocale
           find modpack/mods -maxdepth 1 -type d -name 'ParanoidalLocale_*' -exec rm -rf {} +
           mkdir -p modpack/mods/ParanoidalLocale
