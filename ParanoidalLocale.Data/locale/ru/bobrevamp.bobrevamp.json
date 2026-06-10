@@ -1,63 +1,53 @@
 {
   "technology-name": {
-    "chemical-plant": "Химический завод",
-    "pumpjack": "Добыча нефти",
-    "solid-fuel": "Твёрдое топливо",
-    "rocket-fuel": "Ракетное топливо",
-    "hydrazine": "Исследования гидразина",
-    "heat-shield": "Исследование теплозащиты",
-    "low-density-structure": "Конструкции малой плотности",
-    "thorium-power": "Ториевая ядерная энергетика",
-    "deuterium-power": "Дейтериевая ядерная энергетика",
-    "rtg": "Малый радиоизотопный термоэлектрический генератор"
-  },
-  "entity-name": {
-    "uranium-reactor": "Урановый ядерный реактор",
-    "thorium-reactor": "Ториевый ядерный реактор",
-    "deuterium-reactor": "Дейтериевый ядерный реактор"
+    "bob-chemical-plant": "Химический завод",
+    "bob-hydrazine": "Гидразин",
+    "bob-heat-shield": "Жаростойкие материалы",
+    "bob-rtg": "РИТЭГ"
   },
   "item-name": {
-    "heat-shield-tile": "Теплозащитная плитка",
-    "limestone": "Limestone",
-    "sodium-chlorate": "Хлорат натрия",
-    "sodium-perchlorate": "Перхлорат натрия",
-    "sodium-carbonate": "Карбонат натрия",
-    "sodium-bicarbonate": "Бикарбонат натрия",
-    "ammonium-chloride": "Хлорид аммония",
-    "sodium-cobaltate": "Кобальтат натрия",
-    "rtg": "Малый радиоизотопный термоэлектрический генератор"
+    "bob-heat-shield-tile": "Жаростойкая плита",
+    "bob-limestone": "Известняк",
+    "bob-sodium-chlorate": "Хлорат натрия",
+    "bob-sodium-perchlorate": "Перхлорат натрия",
+    "bob-sodium-carbonate": "Карбонат натрия",
+    "bob-sodium-bicarbonate": "Бикарбонат натрия",
+    "bob-ammonium-chloride": "Хлорид аммония",
+    "bob-sodium-cobaltate": "Гексанитрокобальтат",
+    "bob-rtg": "РИТЭГ"
   },
   "fluid-name": {
-    "ammonia": "Аммиак",
-    "dinitrogen-tetroxide": "Тетраоксид диазота",
-    "hydrazine": "Гидразин",
-    "hydrogen-peroxide": "Перекись водорода",
-    "nitric-oxide": "Оксид азота",
-    "nitrogen-dioxide": "Диоксид азота",
-    "sour-gas": "Кислый высокосернистый газ",
-    "carbon-dioxide": "Углекислый газ",
-    "brine": "Засоленный раствор",
-    "ammoniated-brine": "Аммонизированный раствор"
+    "bob-ammonia": "Аммиак",
+    "bob-dinitrogen-tetroxide": "Тетраоксид диазота",
+    "bob-hydrazine": "Гидразин",
+    "bob-hydrogen-peroxide": "Перекись водорода",
+    "bob-nitric-oxide": "Оксид азота",
+    "bob-nitrogen-dioxide": "Диоксид азота",
+    "bob-sour-gas": "Природный газ",
+    "bob-carbon-dioxide": "Диоксид углерода",
+    "bob-brine": "Рассол",
+    "bob-ammoniated-brine": "Аммонизированный рассол"
   },
   "recipe-name": {
-    "oil-processing-with-sulfur": "Переработка нефти с получением серы",
-    "oil-processing-with-sulfur-dioxide": "Переработка нефти с получением оксида серы",
-    "oil-processing-with-sulfur-dioxide-2": "Переработка нефти с получением оксида серы",
-    "oil-processing-with-sulfur-dioxide-3": "Переработка нефти с получением оксида серы",
-    "petroleum-gas-sweetening": "Очистка __FLUID__petroleum-gas_",
-    "solid-fuel-from-sour-gas": "Твердое топливо из высокосернистого газа",
-    "ammonium-chloride-recycling": "Переработка хлорида аммония",
-    "brine-electrolysis": "Электролиз засоленного раствора"
-  },
-  "fuel-category-name": {
-    "uranium": "Уран",
-    "thorium": "Торий",
-    "deuterium": "Дейтрерий"
+    "bob-oil-processing-with-sulfur": "Переработка нефти с получением серы",
+    "bob-oil-processing-with-sulfur-dioxide": "Переработка нефти с получением диоксида серы",
+    "bob-oil-processing-with-sulfur-dioxide-2": "Переработка нефти с получением диоксида серы",
+    "bob-oil-processing-with-sulfur-dioxide-3": "Переработка нефти с получением диоксида серы",
+    "bob-carbon-dioxide-oil-processing": "Переработка нефти с использованием диоксида углерода",
+    "bob-petroleum-gas-sweetening": "__FLUID__petroleum-gas_: нейтрализация",
+    "bob-solid-fuel-from-sour-gas": "Твёрдое топливо из природного газа",
+    "bob-ammonium-chloride-reprocessing": "Переработка хлорида аммония",
+    "bob-brine-electrolysis": "Электролиз рассола"
   },
   "mod-setting-name": {
-    "bobmods-revamp-nuclear": "Доп. ядерные технологии"
+    "bobmods-revamp-old-oil": "Реорганизация нефтепереработки",
+    "bobmods-revamp-oil": "Новая реорганизация нефтепереработки",
+    "bobmods-revamp-hardmode": "Расширенная химия",
+    "bobmods-revamp-rtg": "РИТЭГ"
   },
   "mod-setting-description": {
-    "bobmods-revamp-nuclear": "Если включено, это добавит к существующему ядерному реактору на уране ещё два - ториевый и дейтериевый, а также соответствующим образом изменит технологические цепочки."
+    "bobmods-revamp-old-oil": "Если активно, то эта настройка внесёт некоторые изменения в процесс переработки нефти.\\nУбирает базовые рецепты серы и оксида серы, и добавляет другие способы производства серы и диоксида серы если MCI установлен.",
+    "bobmods-revamp-oil": "Если активно, то эта настройка сделает процесс переработки нефти более реалистичным.\\nЗаменит попутный газ на природный, который впоследствии можно будет переработать в попутный газ.\\nУбирает базовые рецепты серы и серной кислоты, добавляет сульфид водорода в природный газ если MCI установлен. \\nНастройка имеет высший приоритет над старой системой рецептов.",
+    "bobmods-revamp-hardmode": "Если включено, этот параметр расширит некоторые упрощенные химические процессы, чтобы сделать их более реалистичными.\\nЭто повлияет на диоксид азота, перхлорат лития, хлорид кальция, карбонат натрия и природный газ в рецептах с водородом."
   }
 }

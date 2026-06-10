@@ -51,5 +51,8 @@
     "angels-lower-infinite-yield": "Probability that infinite ore produces an output",
     "angels-enablefluidreq": "Mining infinite ores requires fluids",
     "angels-keepuranacid": "Mining uranium ore requires acid"
+  },
+  "technology-name": {
+    "mining-with-fluid": "Advanced mining"
   }
 }

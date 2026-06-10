@@ -6,6 +6,14 @@
     "bi-adv-fertilizer": "BI-Super-Fertilizer(™)",
     "fertilizer": "Common fertilizer",
     "bi-purified-air": "Purified air",
+    "bi-arboretum-r1": "Plant trees",
+    "bi-arboretum-r2": "Change terrain (basic)",
+    "bi-arboretum-r3": "Change terrain (advanced)",
+    "bi-arboretum-r4": "Change terrain & plant trees (basic)",
+    "bi-arboretum-r5": "Change terrain & plant trees (advanced)",
+    "bi-seed-bomb-advanced": "Advanced seed bomb",
+    "bi-seed-bomb-basic": "Basic seed bomb",
+    "bi-seed-bomb-standard": "Standard seed bomb",
     "bi-seed": "Tree seed",
     "bi-biomass": "Algae biomass",
     "bi-liquid-air": "Liquid air",
@@ -28,6 +36,7 @@
     "wood-bricks": "Wood bricks",
     "wood-charcoal": "Charcoal",
     "sand": "Sand",
-    "slag": "Slag"
+    "slag": "Slag",
+    "bi-rail-wood": "Wooden rails"
   }
 }

@@ -1,7 +1,5 @@
 {
-  "description": {
-    "Schall-flying-text-item": "__2____3__ __1__ (__4__)"
-  },
+  "description": {},
   "entity-name": {
     "Schall-pickup-tower-R32": "__ITEM__Schall-pickup-tower-R32__",
     "Schall-pickup-tower-R32-upper": "__ITEM__Schall-pickup-tower-R32-upper__",
@@ -17,7 +15,6 @@
   },
   "mod-setting-name": {},
   "mod-setting-description": {},
-  "string-mod-setting": {},
   "mod-name": {},
   "mod-description": {}
 }

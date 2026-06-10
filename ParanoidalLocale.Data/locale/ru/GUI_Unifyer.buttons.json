@@ -1,7 +1,5 @@
 {
-  "guiu": {
-    "spawncontrol_unstuck": "Нажмите эту кнопку если вы застряли"
-  },
+  "guiu": {},
   "mod-setting-name": {},
   "mod-setting-description": {},
   "string-mod-setting": {}

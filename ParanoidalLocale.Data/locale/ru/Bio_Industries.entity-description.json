@@ -1,5 +1,6 @@
 {
   "entity-description": {
+    "bi-arboretum": "Терраформер изменяет местность или растущие деревья в радиусе вокруг строения",
     "bi-bio-farm": "Биоферма, превращает саженцы в древесину. Потребляет больше электричества ночью",
     "bi-bio-garden": "__ENTITY__bi-bio-garden__ очищает воздух от загрязнения. (Один биосад может поглотить 45 единиц загрязнения в секунду — это как 1500 деревьев!)",
     "bi-bio-greenhouse": "Используйте теплицу для роста саженцев",
@@ -12,6 +13,7 @@
     "bi-bio-solar-farm": "Сохраняет пространство, соединяя ваши солнечный панели в компактный блок. Создает много энергии!",
     "bi-large-substation": "Гигантская подстанция",
     "bi-solar-boiler": "Бойлер с нагревом от солнечного тепла или электричества (также производит электричество).",
+    "bi-solar-mat": "Солнечная панель/пол которая может быть использована как дорожное покрытие, генерирует 10kW электричества и позволяет быстро перемещаться (Спасибо Илону Маску!)",
     "bi-bio-cannon": "Может стрелять ТОЛЬКО по гнездам! - Дистанция 90 - Пока что без возможности ручного наведения",
     "bi-dart-turret": "These turrets are immediately available and protect you from enemy attacks at a minimal cost. Of course, the darts inflict less damage than bullets, but __ENTITY__bi-dart-turret__s have a higher range and can fire at a higher speed than normal __ENTITY__gun-turret__s.",
     "bi-power-to-rail-pole": "Коннектор ваших электрических рельс к электрической сети",

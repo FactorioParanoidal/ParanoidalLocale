@@ -1,5 +1,6 @@
 {
   "entity-name": {
+    "bi-arboretum": "Терраформер",
     "bi-bio-farm": "Биоферма",
     "bi-bio-garden": "Биосад",
     "bi-bio-greenhouse": "Теплица",
@@ -12,6 +13,7 @@
     "bi-bio-solar-farm": "Био Солнечная ферма",
     "bi-large-substation": "Гигантская подстанция",
     "bi-solar-boiler": "Солнечная электростанция и бойлер - Бойлер",
+    "bi-solar-mat": "Пол Илона Маска",
     "bi-bio-cannon": "Прототип артиллерии",
     "bi-dart-turret": "Дротиковая турель",
     "bi-power-to-rail-pole": "Коннектор \"Электро-рельсы\"",
