@@ -1,12 +1,12 @@
 {
   "name": "ParanoidalLocale",
   "version": "1.11.1",
-  "factorio_version": "1.1",
+  "factorio_version": "2.0",
   "title": "PARANOIDAL Locale",
   "author": "SKProCH",
   "description": "Russian locale for mods, that included in Factorio PARANOIDAL mod-pack",
   "dependencies": [
-    "base >= 1.1.0",
+    "base >= 2.0.0",
     "? AbandonedRuins_updated_fork",
     "? AfraidOfTheDark",
     "? Aircraft-space-age",
