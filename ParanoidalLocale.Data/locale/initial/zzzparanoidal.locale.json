@@ -1,45 +1,140 @@
 {
   "item-name": {
     "artillery-turret-prototype": "Artillery Cannon Prototype",
+    "angels-roll-brass": "Brass Sheet Coil",
+    "angels-roll-bronze": "Bronze Sheet Coil",
+    "angels-roll-tungsten": "Tungsten Sheet Coil",
+    "angels-roll-nitinol": "Nitinol Sheet Coil",
+    "angels-roll-invar": "Invar Sheet Coil",
+    "angels-roll-cobalt-steel": "Cobalt Steel Sheet Coil",
+    "angels-roll-gunmetal": "Gunmetal Sheet Coil",
+    "angels-wire-coil-insulated": "Insulated wire coil",
+    "ASE-sand-die": "Sand Mold",
+    "ASE-metal-die": "Metal Die",
+    "ASE-spent-metal-die": "Dirty Die Cast",
     "artillery-shell-prototype": "Low Power Artillery Shell (Prototype)",
     "stone-crushed": "Crushed Stone",
     "bi-stone-crusher": "Stone Crusher",
     "hazard-concrete-brick": "Hazard Marked Concrete Brick",
-    "hero_downgrade": "Demote Turrets"
+    "hero_downgrade": "Demote Turrets",
+    "offshore-mk0-pump": "Burner Pump",
+    "offshore-mk2-pump": "Offshore Pump 2",
+    "offshore-mk3-pump": "Offshore Pump 3",
+    "offshore-mk4-pump": "Offshore Pump 4",
+    "bi-bio-farm-2": "Biofarm MK2",
+    "bi-bio-farm-3": "Biofarm MK3",
+    "bi-bio-greenhouse-2": "Greenhouse MK2",
+    "bi-bio-greenhouse-3": "Greenhouse MK3",
+    "bi-bio-reactor-2": "Bioreactor MK2",
+    "bi-bio-reactor-3": "Bioreactor MK3",
+    "bob-nitinol-pipe": "Nitinol pipe",
+    "bob-nitinol-pipe-to-ground": "Nitinol pipe-to-ground"
   },
   "item-description": {
     "orbital-solar-collector": "A satellite capable of capturing up to 1000 megawatts of power from a nearby star in a synchronous orbit and relaying it to the planet's surface to a ground transceiver station.",
-    "orbital-power-reciver": "Receives a powerful beam of energy from an orbiting satellite on earth and converts it into 1000 MW of power for the terrestrial power grid."
+    "orbital-power-reciver": "Receives a powerful beam of energy from an orbiting satellite on earth and converts it into 1000 MW of power for the terrestrial power grid.",
+    "offshore-mk0-pump": "Pumps fluid from a body of water..\\n[font=default-bold][color=#f5cb48][img=tooltip-category-electricity]Consumes Burnable Fuel[/color][/font]\\n[font=default-semibold][color=#e4cead]Max. consumption:[/color][/font] 900 KW",
+    "offshore-pump": "Pumps fluid from a body of water.\\n[font=default-bold][color=#f5cb48][img=tooltip-category-electricity]Consumes electricity[/color][/font]\\n[font=default-semibold][color=#e4cead]Max. consumption:[/color][/font] 1.2 MW",
+    "offshore-mk2-pump": "Pumps fluid from a body of water.\\n[font=default-bold][color=#f5cb48][img=tooltip-category-electricity]ПConsumes electricity[/color][/font]\\n[font=default-semibold][color=#e4cead]Max. consumption:[/color][/font] 2.07 MW",
+    "offshore-mk3-pump": "Pumps fluid from a body of water.\\n[font=default-bold][color=#f5cb48][img=tooltip-category-electricity]Consumes electricity[/color][/font]\\n[font=default-semibold][color=#e4cead]Max. consumption:[/color][/font] 2.89 MW",
+    "offshore-mk4-pump": "Pumps fluid from a body of water.\\n[font=default-bold][color=#f5cb48][img=tooltip-category-electricity]Consumes electricity[/color][/font]\\n[font=default-semibold][color=#e4cead]Max. consumption:[/color][/font] 3.72 MW",
+    "seafloor-pump": "Extracts viscous mud water from a body of water.\\n[font=default-bold][color=#f5cb48][img=tooltip-category-electricity]Consumes electricity[/color][/font]\\n[font=default-semibold][color=#e4cead]Max. consumption:[/color][/font] 500 KW",
+    "seafloor-pump-2": "Extracts viscous mud water from a body of water.\\n[font=default-bold][color=#f5cb48][img=tooltip-category-electricity]Consumes electricity[/color][/font]\\n[font=default-semibold][color=#e4cead]Max. consumption:[/color][/font] 1.0 MW",
+    "seafloor-pump-3": "Extracts viscous mud water from a body of water.\\n[font=default-bold][color=#f5cb48][img=tooltip-category-electricity]Consumes electricity[/color][/font]\\n[font=default-semibold][color=#e4cead]Max. consumption:[/color][/font] 1.5 MW"
   },
   "recipe-name": {
     "artillery-turret-prototype": "Artillery Cannon Prototype",
-    "scrap-rail-to-rail": "Scrap-rail-to-rail enhancement",
-    "rail-signal-scrap-to-rail-signal": "Primitive Traffic Light Improvement",
-    "rail-chain-signal-scrap-to-rail-chain-signal": "Walkthrough Primitive Traffic Light Improvement",
-    "train-stop-scrap-to-train-stop": "Primitive Station Upgrade"
-  },
-  "recipe-description": {
-    "scrap-rail-to-rail": "Replacing wooden sleepers with concrete"
+    "offshore-mk0-pump": "Burner Pump",
+    "offshore-pump": "Electric Offshore Pump",
+    "offshore-mk2-pump": "Electric Offshore Pump MK2",
+    "offshore-mk3-pump": "Electric Offshore Pump MK3",
+    "offshore-mk4-pump": "Electric Offshore Pump MK4",
+    "seafloor-pump": "Seafloor pump",
+    "seafloor-pump-2": "Seafloor pump MK2",
+    "seafloor-pump-3": "Seafloor pump MK3",
+    "bi-bio-farm-2": "Biofarm MK2",
+    "bi-bio-farm-3": "Biofarm MK3",
+    "bi-bio-greenhouse-2": "Greenhouse MK2",
+    "bi-bio-greenhouse-3": "Greenhouse MK3",
+    "bi-bio-reactor-2": "Bioreactor MK2",
+    "bi-bio-reactor-3": "Bioreactor MK3",
+    "tungsten-casting": "Tungsten Sheet Coil",
+    "bronze-casting": "Bronze Sheet Coil",
+    "brass-casting": "Brass Sheet Coil",
+    "invar-casting": "Invar Sheet Coil",
+    "nitinol-casting": "Nitinol Sheet Coil",
+    "cobalt-steel-casting": "Cobalt Steel Sheet Coil",
+    "gunmetal-casting": "Gunmetal Sheet Coil",
+    "angelsore-pure-platinum-processing": "Pure platinum ore processing",
+    "angelsore-pure-chrome-processing": "Pure chrome ore processing",
+    "angelsore-crushed-manganese-processing": "Crushed manganese ore processing",
+    "molten-magnesium-remelting": "Magnesium remelting",
+    "copper-plate": "Copper plate",
+    "iron-plate": "Iron plate",
+    "reg-casting": "__1__ __2__",
+    "die-casting": "Die Casting of __1__ __2__",
+    "sand-casting": "Sand Casting of __1__ __2__",
+    "ASE-metal-die-wash": "Die Cast Scrubbing"
   },
   "entity-name": {
     "artillery-turret-prototype": "Artillery Cannon Prototype",
     "yir_usl": "Locomotive MK0",
     "yir_us_cargo": "MK0 Freight Car",
-    "seafloor-pump-placeholder": "Seafloor pump",
-    "seafloor-pump-2-placeholder": "Seafloor pump MK2",
-    "seafloor-pump-3-placeholder": "Seafloor pump MK3"
+    "offshore-mk0-pump": "Burner Pump",
+    "offshore-pump": "Electric Offshore Pump",
+    "offshore-mk2-pump": "Electric Offshore Pump MK2",
+    "offshore-mk3-pump": "Electric Offshore Pump MK3",
+    "offshore-mk4-pump": "Electric Offshore Pump MK4",
+    "seafloor-pump": "Seafloor pump",
+    "seafloor-pump-2": "Seafloor pump MK2",
+    "seafloor-pump-3": "Seafloor pump MK3",
+    "bi-bio-farm-2": "Biofarm MK2",
+    "bi-bio-farm-3": "Biofarm MK3",
+    "bi-bio-greenhouse-2": "Greenhouse MK2",
+    "bi-bio-greenhouse-3": "Greenhouse MK3",
+    "bi-bio-reactor-2": "Bioreactor MK2",
+    "bi-bio-reactor-3": "Bioreactor MK3"
   },
   "entity-description": {
     "artillery-turret-prototype": "Artillery prototype for destroying enemy bases.",
-    "orbital-power-reciver": "Receives a powerful beam of energy from an orbiting satellite on earth and converts it into 1000 MW of power for the terrestrial power grid."
+    "orbital-power-reciver": "Receives a powerful beam of energy from an orbiting satellite on earth and converts it into 1000 MW of power for the terrestrial power grid.",
+    "offshore-mk0-pump": "Pumps fluid from a body of water..\\n[font=default-bold][color=#f5cb48][img=tooltip-category-electricity]Consumes Burnable Fuel[/color][/font]\\n[font=default-semibold][color=#e4cead]Max. consumption:[/color][/font] 900 KW",
+    "offshore-pump": "Pumps fluid from a body of water.\\n[font=default-bold][color=#f5cb48][img=tooltip-category-electricity]Consumes electricity[/color][/font]\\n[font=default-semibold][color=#e4cead]Max. consumption:[/color][/font] 1.2 MW",
+    "offshore-mk2-pump": "Pumps fluid from a body of water.\\n[font=default-bold][color=#f5cb48][img=tooltip-category-electricity]ПConsumes electricity[/color][/font]\\n[font=default-semibold][color=#e4cead]Max. consumption:[/color][/font] 2.07 MW",
+    "offshore-mk3-pump": "Pumps fluid from a body of water.\\n[font=default-bold][color=#f5cb48][img=tooltip-category-electricity]Consumes electricity[/color][/font]\\n[font=default-semibold][color=#e4cead]Max. consumption:[/color][/font] 2.89 MW",
+    "offshore-mk4-pump": "Pumps fluid from a body of water.\\n[font=default-bold][color=#f5cb48][img=tooltip-category-electricity]Consumes electricity[/color][/font]\\n[font=default-semibold][color=#e4cead]Max. consumption:[/color][/font] 3.72 MW",
+    "seafloor-pump": "Extracts viscous mud water from a body of water.\\n[font=default-bold][color=#f5cb48][img=tooltip-category-electricity]Consumes electricity[/color][/font]\\n[font=default-semibold][color=#e4cead]Max. consumption:[/color][/font] 500 KW",
+    "seafloor-pump-2": "Extracts viscous mud water from a body of water.\\n[font=default-bold][color=#f5cb48][img=tooltip-category-electricity]Consumes electricity[/color][/font]\\n[font=default-semibold][color=#e4cead]Max. consumption:[/color][/font] 1.0 MW",
+    "seafloor-pump-3": "Extracts viscous mud water from a body of water.\\n[font=default-bold][color=#f5cb48][img=tooltip-category-electricity]Consumes electricity[/color][/font]\\n[font=default-semibold][color=#e4cead]Max. consumption:[/color][/font] 1.5 MW",
+    "seafloor-pump-output": "Extracts viscous mud water from a body of water.",
+    "seafloor-pump-2-output": "Extracts viscous mud water from a body of water.",
+    "seafloor-pump-3-output": "Extracts viscous mud water from a body of water.",
+    "offshore-mk0-pump-output": "Pumps fluid from a body of water.",
+    "offshore-pump-output": "Pumps fluid from a body of water.",
+    "offshore-mk2-pump-output": "Pumps fluid from a body of water.",
+    "offshore-mk3-pump-output": "Pumps fluid from a body of water.",
+    "offshore-mk4-pump-output": "Pumps fluid from a body of water."
   },
   "technology-name": {
     "alien-artifact": "Alien Artifact Rework",
-    "artillery-prototype": "Artillery prototype"
+    "artillery-prototype": "Artillery prototype",
+    "offshore-mk2-pump": "Electric Offshore Pump 2",
+    "offshore-mk3-pump": "Electric Offshore Pump 3",
+    "offshore-mk4-pump": "Electric Offshore Pump 4",
+    "platinum-ore-refining": "Platinum ore refining",
+    "chrome-ore-refining": "Chrome ore refining",
+    "manganese-ore-refining": "Manganese ore refining",
+    "angels-alloys-smelting": "Advanced Alloys Smelting",
+    "angels-ironworks": "Advanced Ironworks"
   },
   "technology-description": {
     "alien-artifact": "Technology that allows alien artifacts to be fused and transmuted into other species.",
-    "artillery-prototype": "Stationary artillery gun prototype. Will conduct automatic shooting at the nests. According to the calculated characteristics, it has a short range and rate of fire."
+    "artillery-prototype": "Stationary artillery gun prototype. Will conduct automatic shooting at the nests. According to the calculated characteristics, it has a short range and rate of fire.",
+    "offshore-mk2-pump": "Good Electric Offshore Pump",
+    "offshore-mk3-pump": "Cool Electric Offshore Pump",
+    "offshore-mk4-pump": "Best Electric Offshore Pump",
+    "angels-alloys-smelting": "Advanced steps for the production of alloy sheet coils (gunmetal, invar, cobalt-steel).",
+    "angels-ironworks": "Cast gear wheels directly from molten metal using sand or metal dies."
   },
   "mod-setting-name": {
     "paranoidal-miniloader-energy-multiplier": "Miniloaders energy usage multiplier",
@@ -54,7 +149,8 @@
     "baa-arrow-scale": "Arrow scale",
     "baa-arrow-tint": "Arrow tint",
     "item-drop": "Destroyed chest spills contents",
-    "newbie_resourse": "All resources richness x5"
+    "newbie_resourse": "All resources richness x5",
+    "zzz-settings": "How to enable PARANOIDAL fine settings"
   },
   "mod-setting-description": {
     "paranoidal-miniloader-energy-multiplier": "Electric energy consumption of all miniloaders will be equal to predefined in \"miniloaders\" mod, multiplied by this coefficient.",
@@ -67,7 +163,8 @@
     "res_loc_3": "Enables the replacement of standard graphics with graphics from the Yuoki mod (graphics changes only).",
     "res_loc_e": "Enables the replacement of standard graphics with graphics from the Yuoki mod (graphics changes only).",
     "item-drop": "Destroyed chest spills contents",
-    "newbie_resourse": "NOT RECOMMENDED to disable if you are newbie to Paranoidal"
+    "newbie_resourse": "NOT RECOMMENDED to disable if you are newbie to Paranoidal",
+    "zzz-settings": "If you're reading this, you're probably looking for a bunch of hidden and subtle settings. You won't find them here until you turn off the \"Advanced PARANOIDAL Settings\" mod..."
   },
   "item-group-name": {
     "transport": "Transport",
@@ -76,5 +173,25 @@
   "tile-name": {
     "concrete-brick-fix": "Concrete Brick Covering",
     "reinforced-concrete-brick-fix": "Reinforced Concrete Brick Coating"
+  },
+  "map-gen-preset-name": {
+    "paranoidal": "Paranoidal",
+    "paranoidal-no-enemies": "Paranoidal: No enemies"
+  },
+  "map-gen-preset-description": {
+    "paranoidal": "Recommended start for ParanoidalModpack: rich ore deposits. Biters and nests spawn normally.",
+    "paranoidal-no-enemies": "Same as Paranoidal but without enemies: no nests are generated, no biters on the map. Suited for relaxed exploration of Bob/Angels mechanics."
+  },
+  "lookup": {
+    "iron": "Iron",
+    "steel": "Steel",
+    "brass": "Brass",
+    "cobalt-steel": "Cobalt Steel",
+    "titanium": "Titanium",
+    "tungsten": "Tungsten",
+    "nitinol": "Nitinol"
+  },
+  "string": {
+    "gear": "Gear Wheel"
   }
 }
