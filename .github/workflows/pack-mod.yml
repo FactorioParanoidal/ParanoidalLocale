@@ -28,9 +28,35 @@ jobs:
         run: ./build.sh UpdateAndPackMod
 
       - name: Commit and push if changed
+        id: commit
         run: |
           git config --global user.email 'skproch@yandex.ru'
           git config --global user.name 'SKProCHs Bot'
-          git diff --quiet && git diff --staged --quiet || (git add . && git commit -am 'Update ParanoidalLocale mod sources' && git push)
+          if git diff --quiet && git diff --staged --quiet; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            git add .
+            git commit -am 'Update ParanoidalLocale mod sources'
+            git push
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Read mod version
+        id: version
+        if: steps.commit.outputs.changed == 'true'
+        run: |
+          version=$(grep '"version"' ParanoidalLocale/info.json | head -1 | sed -E 's/.*"version" *: *"([^"]+)".*/\1/')
+          echo "version=$version" >> "$GITHUB_OUTPUT"
+
+      - name: Create GitHub Release
+        if: steps.commit.outputs.changed == 'true'
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: v${{ steps.version.outputs.version }}
+          name: ParanoidalLocale ${{ steps.version.outputs.version }}
+          files: .nuke/temp/ParanoidalLocale_${{ steps.version.outputs.version }}.zip
+          make_latest: true
+          generate_release_notes: true
+          token: ${{ secrets.GITHUB_TOKEN }}
