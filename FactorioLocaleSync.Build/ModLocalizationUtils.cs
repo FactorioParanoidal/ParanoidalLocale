@@ -1,4 +1,5 @@
 #nullable enable
+#pragma warning disable CS8620 // Argument cannot be used for parameter due to differences in the nullability of reference types.
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -108,7 +109,7 @@ public static class ModLocalizationUtils
         }
     }
 
-    public static void MigrateTranslationsFromStaleFiles(IEnumerable<ModLocale> modLocales,
+    public static void MigrateTranslationsFromStaleFiles(IReadOnlyList<ModLocale> modLocales,
         AbsolutePath initialFolder, AbsolutePath targetLocaleFolder, ILogger? logger)
     {
         var expectedNames = modLocales
@@ -233,9 +234,10 @@ public static class ModLocalizationUtils
                     continue;
                 }
 
+
                 // 2. found in modpack's own translations
                 var alreadyLocalized =
-                    existedLocalization.GetValueOrDefault(sectionKey)?.GetValueOrDefault(localeKey);
+                    existedLocalization?.GetValueOrDefault(sectionKey)?.GetValueOrDefault(localeKey);
                 if (alreadyLocalized != null && !string.IsNullOrWhiteSpace(alreadyLocalized))
                     section[localeKey] = alreadyLocalized;
             }
