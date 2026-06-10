@@ -17,6 +17,9 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Mark workspace as safe for git
+        run: git config --global --add safe.directory '*'
+
       - name: Update and pack mod
         run: ./build.sh UpdateAndPackMod
 

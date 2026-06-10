@@ -15,7 +15,8 @@ partial class Build : NukeBuild
     [Parameter("Path, where paranoidal should be located")]
     readonly AbsolutePath ParanoidalDirectory = TemporaryDirectory / "paranoidal-git";
 
-    [Parameter("Target locale to localize to")] readonly string TargetLocale = "ru";
+    [Parameter("Target locale to localize to")]
+    readonly string TargetLocale = "ru";
 
     Target CloneParanoidalRepository => _ => _
         .Executes(() =>
@@ -59,14 +60,23 @@ partial class Build : NukeBuild
                 modLocalesToProcess.Sum(locale => locale.Files.Count), modsToProcess.Count);
 
             var initialFolder = LocalizationsFolder / "initial";
+            var targetLocalizationsFolder = LocalizationsFolder / TargetLocale;
+
+            Log.Information("Migrating translations from stale files...");
+            ModLocalizationUtils.MigrateTranslationsFromStaleFiles(modLocalesToProcess, initialFolder,
+                targetLocalizationsFolder, Log.Logger);
+
+            Log.Information("Cleaning stale files...");
+            ModLocalizationUtils.CleanStaleFiles(modLocalesToProcess, initialFolder, targetLocalizationsFolder,
+                Log.Logger);
+
             Log.Information("Writing mods to {TargetFolder}", initialFolder);
             ModLocalizationUtils.WriteModsInitialLocaleFiles(modLocalesToProcess, initialFolder, Log.Logger);
 
             var dependenciesJsonPath = LocalizationsFolder / "dependencies.json";
-            Log.Information("Writing localized mods to {DependenciesJsonPath}", dependenciesJsonPath);
-            ModLocalizationUtils.AppendDependentMods(modsToProcess, dependenciesJsonPath);
+            Log.Information("Syncing localized mods to {DependenciesJsonPath}", dependenciesJsonPath);
+            ModLocalizationUtils.SyncDependentMods(modsToProcess, dependenciesJsonPath);
 
-            var targetLocalizationsFolder = LocalizationsFolder / TargetLocale;
             Log.Information("Appending already localized string to target localizations in {TargetFolder}",
                 targetLocalizationsFolder);
             ModLocalizationUtils.AppendAlreadyLocalizedContent(modInfos, modLocalesToProcess, targetLocalizationsFolder,

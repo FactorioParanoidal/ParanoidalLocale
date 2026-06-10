@@ -7,7 +7,6 @@ using System.Text.Encodings.Web;
 using System.Text.Json;
 using FactorioLocaleSync.Library;
 using FactorioLocaleSync.Library.Mods;
-using NuGet.Packaging;
 using Nuke.Common.IO;
 using Serilog;
 
@@ -78,13 +77,116 @@ public static class ModLocalizationUtils
             file.FileName, file.Locale.LocaleName, filePath);
     }
 
-    public static void AppendDependentMods(IEnumerable<ModInfo> mods, AbsolutePath path)
+    public static void SyncDependentMods(IEnumerable<ModInfo> mods, AbsolutePath path)
     {
-        var dependencies = path.FileExists()
-            ? JsonSerializer.Deserialize<HashSet<string>>(File.ReadAllText(path))
-            : new HashSet<string>();
-        dependencies.AddRange(mods.Select(info => info.InfoJson.InternalName));
-        File.WriteAllText(path, JsonSerializer.Serialize(dependencies, JsonSerializerOptions));
+        var names = mods.Select(info => info.InfoJson.InternalName).OrderBy(x => x).ToHashSet();
+        File.WriteAllText(path, JsonSerializer.Serialize(names, JsonSerializerOptions));
+    }
+
+    public static void CleanStaleFiles(IEnumerable<ModLocale> modLocales,
+        AbsolutePath initialFolder, AbsolutePath targetLocaleFolder, ILogger? logger)
+    {
+        var expectedPaths = modLocales
+            .SelectMany(l => l.Files.Values)
+            .Where(f => f.FileName.EndsWith(".cfg"))
+            .Select(f => Path.GetFileName(f.GetTargetPath(initialFolder)))
+            .ToHashSet();
+
+        if (!initialFolder.DirectoryExists()) return;
+
+        foreach (var file in initialFolder.GlobFiles("*.json"))
+        {
+            if (expectedPaths.Contains(file.Name)) continue;
+            logger?.Information("Deleting stale initial file {File}", file);
+            File.Delete(file);
+            var ruFile = targetLocaleFolder / file.Name;
+            if (ruFile.FileExists())
+            {
+                logger?.Information("Deleting stale ru file {File}", ruFile);
+                File.Delete(ruFile);
+            }
+        }
+    }
+
+    public static void MigrateTranslationsFromStaleFiles(IEnumerable<ModLocale> modLocales,
+        AbsolutePath initialFolder, AbsolutePath targetLocaleFolder, ILogger? logger)
+    {
+        var expectedNames = modLocales
+            .SelectMany(l => l.Files.Values)
+            .Where(f => f.FileName.EndsWith(".cfg"))
+            .Select(f => Path.GetFileName(f.GetTargetPath(initialFolder)))
+            .ToHashSet();
+
+        if (!initialFolder.DirectoryExists()) return;
+
+        var staleFiles = initialFolder.GlobFiles("*.json")
+            .Where(f => !expectedNames.Contains(f.Name))
+            .ToList();
+
+        if (staleFiles.Count == 0) return;
+
+        // (section, key, englishValue) -> ruValue
+        var migrationMap = new Dictionary<(string, string, string), string>();
+
+        foreach (var staleInitialPath in staleFiles)
+        {
+            var staleRuPath = targetLocaleFolder / staleInitialPath.Name;
+            if (!staleRuPath.FileExists()) continue;
+
+            var initialData =
+                JsonSerializer.Deserialize<Dictionary<string, Dictionary<string, string>>>(
+                    File.ReadAllText(staleInitialPath));
+            var ruData =
+                JsonSerializer.Deserialize<Dictionary<string, Dictionary<string, string>>>(
+                    File.ReadAllText(staleRuPath));
+
+            if (initialData == null || ruData == null) continue;
+
+            foreach (var (section, keys) in initialData)
+            {
+                if (!ruData.TryGetValue(section, out var ruSection)) continue;
+                foreach (var (key, englishValue) in keys)
+                    if (ruSection.TryGetValue(key, out var ruValue) && !string.IsNullOrWhiteSpace(ruValue))
+                        migrationMap.TryAdd((section, key, englishValue), ruValue);
+            }
+        }
+
+        if (migrationMap.Count == 0) return;
+
+        foreach (var modLocale in modLocales)
+        foreach (var file in modLocale.Files.Values.Where(f => f.FileName.EndsWith(".cfg")))
+        {
+            var targetRuPath = file.GetTargetPath(targetLocaleFolder);
+            var initialContent = file.GetContent();
+
+            Dictionary<string, Dictionary<string, string>>? existingRu = null;
+            if (File.Exists(targetRuPath))
+                existingRu =
+                    JsonSerializer.Deserialize<Dictionary<string, Dictionary<string, string>>>(
+                        File.ReadAllText(targetRuPath));
+
+            existingRu ??= new Dictionary<string, Dictionary<string, string>>();
+
+            var changed = false;
+            foreach (var (section, keys) in initialContent)
+            {
+                var ruSection = existingRu.GetOrAdd(section, () => new Dictionary<string, string>());
+                foreach (var (key, englishValue) in keys)
+                {
+                    if (ruSection.ContainsKey(key)) continue;
+
+                    if (migrationMap.TryGetValue((section, key, englishValue), out var migratedValue))
+                    {
+                        ruSection[key] = migratedValue;
+                        changed = true;
+                        logger?.Information("Migrated translation for [{Section}] {Key} from stale files", section,
+                            key);
+                    }
+                }
+            }
+
+            if (changed) File.WriteAllText(targetRuPath, JsonSerializer.Serialize(existingRu, JsonSerializerOptions));
+        }
     }
 
     public static void AppendAlreadyLocalizedContent(IEnumerable<ModInfo> mods, IEnumerable<ModLocale> initialLocales,
@@ -115,20 +217,31 @@ public static class ModLocalizationUtils
             : new Dictionary<string, Dictionary<string, string>>();
 
         var initialLocalization = file.GetContent();
+        var result = new Dictionary<string, Dictionary<string, string>>();
         foreach (var (sectionKey, sectionContent) in initialLocalization)
         {
-            var section = localeDictionary.GetOrAdd(sectionKey, () => new Dictionary<string, string>());
-
+            var section = new Dictionary<string, string>();
+            result[sectionKey] = section;
             foreach (var (localeKey, _) in sectionContent)
             {
-                if (section.ContainsKey(localeKey)) continue;
+                // 1. already in ru/ file
+                if (localeDictionary.TryGetValue(sectionKey, out var existingSection)
+                    && existingSection.TryGetValue(localeKey, out var existing)
+                    && !string.IsNullOrWhiteSpace(existing))
+                {
+                    section[localeKey] = existing;
+                    continue;
+                }
+
+                // 2. found in modpack's own translations
                 var alreadyLocalized =
-                    existedLocalization!.GetValueOrDefault(sectionKey)!?.GetValueOrDefault(localeKey);
-                if (alreadyLocalized != null) section.Add(localeKey, alreadyLocalized);
+                    existedLocalization.GetValueOrDefault(sectionKey)?.GetValueOrDefault(localeKey);
+                if (alreadyLocalized != null && !string.IsNullOrWhiteSpace(alreadyLocalized))
+                    section[localeKey] = alreadyLocalized;
             }
         }
 
-        var content = JsonSerializer.Serialize(localeDictionary, JsonSerializerOptions);
+        var content = JsonSerializer.Serialize(result, JsonSerializerOptions);
         File.WriteAllText(filePath, content);
     }
 
