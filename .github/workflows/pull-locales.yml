@@ -10,6 +10,7 @@ on:
 
 permissions:
   contents: write
+  actions: write
 
 jobs:
   update-locales-files:
@@ -34,9 +35,26 @@ jobs:
         run: ./build.sh ExtractLocalizationToJsons
 
       - name: Commit and push if changed
+        id: commit
         run: |
           git config --global user.email 'skproch@yandex.ru'
           git config --global user.name 'SKProCHs Bot'
-          git diff --quiet && git diff --staged --quiet || (git add . && git commit -am 'Updated localization from Factorio Paranoidal mods' && git push)
+          if git diff --quiet && git diff --staged --quiet; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            git add .
+            git commit -am 'Updated localization from Factorio Paranoidal mods'
+            git push
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Trigger pack-mod workflow
+        if: steps.commit.outputs.changed == 'true'
+        run: |
+          curl -fsSL -X POST \
+            -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
+            -H "Accept: application/vnd.github+json" \
+            "https://api.github.com/repos/${{ github.repository }}/actions/workflows/pack-mod.yml/dispatches" \
+            -d '{"ref":"${{ github.ref_name }}"}'
