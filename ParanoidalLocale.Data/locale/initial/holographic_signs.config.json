@@ -1,0 +1,12 @@
+{
+  "item-name": {
+    "hs_holo_sign": "Holographic sign"
+  },
+  "entity-name": {
+    "hs_holo_sign": "Holographic sign"
+  },
+  "mod-setting-name": {
+    "hs-opt-animation": "Enable hologram animation",
+    "hs-opt-text-animation": "Text animation"
+  }
+}
