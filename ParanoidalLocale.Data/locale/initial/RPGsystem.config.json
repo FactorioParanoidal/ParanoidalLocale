@@ -41,7 +41,7 @@
     "LV_Build_Dist": "Each level increases player's reach by __1__ square. Current: __2__",
     "LV_Reach_Dist": "Each level increases player's reach by __1__ square. Current: __2__",
     "LV_Inv_Bonus": "Each level increases player's inventory by __1__. Current: __2__",
-    "LV_InvTrash_Bonus": "Each level increases player's trash inventory by __1__. Current: __2__%",
+    "LV_InvTrash_Bonus": "Each level increases player's trash inventory by __1__. Current: __2__",
     "LV_Robot_Bonus": "Each level increases max player's following destroyer/defender robots by __1__. Current: __2__",
     "LV_Health_Bonus": "Each level increases player's max health by __1__. Current: __2__",
     "LV_Armor_Bonus": "Each level increases player's natural armor by __1__%. Current: __2__%",
@@ -91,8 +91,8 @@
     "charxpmod_time_ratio_xp": "Proportional XP is given to a player based in his played time",
     "charxpmod_print_xp_user": "Print all XP earned as chat messages",
     "charxpmod_xp_multiplier_bonus": "from 0.1 to 100.0",
-    "charxpmod_xp_maxlevel": "40-200 (default 100)",
-    "charxpmod_xp_maxlevel_ability": "10-30 (default 20)",
+    "charxpmod_xp_maxlevel": "40-500 (default 100)",
+    "charxpmod_xp_maxlevel_ability": "10-50 (default 20)",
     "charxpmod_enable_potion_loot": "If enabled, spawners may drop rpg potions as loot"
   },
   "controls": {
