@@ -60,3 +60,45 @@ jobs:
           make_latest: true
           generate_release_notes: true
           token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Generate token for modpack repo
+        id: modpack-token
+        if: steps.commit.outputs.changed == 'true'
+        uses: actions/create-github-app-token@v1
+        with:
+          app-id: ${{ secrets.MODPACK_APP_ID }}
+          private-key: ${{ secrets.MODPACK_APP_PRIVATE_KEY }}
+          owner: FactorioParanoidal
+          repositories: ParanoidalModpack
+
+      - name: Checkout modpack repository
+        if: steps.commit.outputs.changed == 'true'
+        uses: actions/checkout@v4
+        with:
+          repository: FactorioParanoidal/ParanoidalModpack
+          token: ${{ steps.modpack-token.outputs.token }}
+          path: modpack
+          fetch-depth: 0
+
+      - name: Update mod folder in modpack
+        if: steps.commit.outputs.changed == 'true'
+        run: |
+          rm -rf modpack/mods/ParanoidalLocale
+          find modpack/mods -maxdepth 1 -type d -name 'ParanoidalLocale_*' -exec rm -rf {} +
+          mkdir -p modpack/mods/ParanoidalLocale
+          cp -r ParanoidalLocale/. modpack/mods/ParanoidalLocale/
+
+      - name: Create or update modpack PR
+        if: steps.commit.outputs.changed == 'true'
+        uses: peter-evans/create-pull-request@v6
+        with:
+          token: ${{ steps.modpack-token.outputs.token }}
+          path: modpack
+          base: master
+          branch: update-paranoidal-locale
+          commit-message: 'Update ParanoidalLocale to ${{ steps.version.outputs.version }}'
+          title: 'Update ParanoidalLocale mod'
+          body: |
+            Automated update of the `ParanoidalLocale` mod to version ${{ steps.version.outputs.version }}.
+
+            Released at https://github.com/${{ github.repository }}/releases/tag/v${{ steps.version.outputs.version }}
