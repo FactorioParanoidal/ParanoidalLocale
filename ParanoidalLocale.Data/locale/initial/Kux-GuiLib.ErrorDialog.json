@@ -1,4 +1,7 @@
 {
+  "[FactorioLocaleSync.DefaultSectionKey]": {
+    "Game aborted by user. No error report necessary.": "Game aborted by user __1__.\\nNo error report necessary."
+  },
   "Kux-GuiLib-ErrorDialog": {
     "title": "Notice"
   },
