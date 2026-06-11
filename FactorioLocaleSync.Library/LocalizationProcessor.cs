@@ -7,26 +7,38 @@ using IniParser.Model;
 
 namespace FactorioLocaleSync.Library;
 
-public class LocalizationProcessor {
+public static class LocalizationProcessor
+{
+    public const string DefaultSectionKey = $"[{nameof(FactorioLocaleSync)}.{nameof(DefaultSectionKey)}]";
     private static readonly FileIniDataParser FileIniDataParser = new(new FactorioLocaleIniParser());
 
-    public static IReadOnlyDictionary<string, IReadOnlyDictionary<string, string>> LoadFromFile(string filePath) {
+    public static IReadOnlyDictionary<string, IReadOnlyDictionary<string, string>> LoadFromFile(string filePath)
+    {
         var data = FileIniDataParser.ReadFile(filePath, Encoding.UTF8);
+        var dataEnumerable = data.Sections
+            .Select(sectionData => (sectionData.SectionName, sectionData.Keys.AsEnumerable()));
+        if (data.Global.Count != 0) dataEnumerable = dataEnumerable.Prepend((DefaultSectionKey, data.Global));
 
-        return data.Sections.ToDictionary(sectionData => sectionData.SectionName, GetSectionsFromIni);
+        return dataEnumerable.ToDictionary(sectionData => sectionData.SectionName,
+            tuple => GetSectionsFromIni(tuple.Item2));
 
-        IReadOnlyDictionary<string, string> GetSectionsFromIni(SectionData sectionData) {
-            return sectionData.Keys.ToDictionary(keyData => keyData.KeyName, keyData => keyData.Value);
+        IReadOnlyDictionary<string, string> GetSectionsFromIni(IEnumerable<KeyData> sectionData)
+        {
+            return sectionData.ToDictionary(keyData => keyData.KeyName, keyData => keyData.Value);
         }
     }
 
-    public static IReadOnlyDictionary<string, IReadOnlyDictionary<string, string>> Merge(IEnumerable<IReadOnlyDictionary<string, IReadOnlyDictionary<string, string>>> sections) {
+    public static IReadOnlyDictionary<string, IReadOnlyDictionary<string, string>> Merge(
+        IEnumerable<IReadOnlyDictionary<string, IReadOnlyDictionary<string, string>>> sections)
+    {
         return sections
             .SelectMany(dictionary => dictionary)
             .GroupBy(section => section.Key)
-            .ToDictionary(section => section.Key, pairs => MergeGroupedSections(pairs));
+            .ToDictionary(section => section.Key, MergeGroupedSections);
 
-        IReadOnlyDictionary<string, string> MergeGroupedSections(IEnumerable<KeyValuePair<string, IReadOnlyDictionary<string, string>>> grouping) {
+        IReadOnlyDictionary<string, string> MergeGroupedSections(
+            IEnumerable<KeyValuePair<string, IReadOnlyDictionary<string, string>>> grouping)
+        {
             return grouping
                 .SelectMany(pair => pair.Value)
                 .GroupBy(pair => pair.Key)
@@ -35,8 +47,11 @@ public class LocalizationProcessor {
         }
     }
 
-    public static bool ContentLocalized(IReadOnlyDictionary<string, IReadOnlyDictionary<string, string>> source, IReadOnlyDictionary<string, IReadOnlyDictionary<string, string>> target) {
-        foreach (var s in source) {
+    public static bool ContentLocalized(IReadOnlyDictionary<string, IReadOnlyDictionary<string, string>> source,
+        IReadOnlyDictionary<string, IReadOnlyDictionary<string, string>> target)
+    {
+        foreach (var s in source)
+        {
             if (!target.ContainsKey(s.Key)) return false;
 
             var innerDictS = s.Value;

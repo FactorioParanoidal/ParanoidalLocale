@@ -276,7 +276,8 @@ public static class ModLocalizationUtils
         foreach (var (sectionKey, sectionContent) in dictionary)
         {
             if (sectionContent.Count == 0) continue;
-            sb.AppendLine($"[{sectionKey}]");
+            if (sectionKey != LocalizationProcessor.DefaultSectionKey) sb.AppendLine($"[{sectionKey}]");
+
             foreach (var (localeKey, localeValue) in sectionContent)
             {
                 sb.AppendLine($"{localeKey}={localeValue.ReplaceLineEndings("\\n")}");
