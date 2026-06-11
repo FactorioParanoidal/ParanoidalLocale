@@ -1,4 +1,15 @@
 {
+  "[FactorioLocaleSync.DefaultSectionKey]": {
+    "bm-txt-alert": "! ! ! W A R N I N G ! ! !",
+    "bm-txt-swarm": "You hear many roars approaching the base...",
+    "bm-txt-invasion": "The ground is shaking and strange noises are coming from your feet...",
+    "bm-txt-volcano": "The ground is shaking and you see lava in the sky...",
+    "bm-txt-biterzilla": "You hear the roaring roar of an immense creature approaching... you better prepare the defenses...",
+    "bm-txt-worm": "Everything around you begins to sway. Something very large moved the ground. Stay alert!",
+    "bm-txt-human_soldiers": "A group of enemy soldiers are coming to your base!",
+    "bm-txt-gleba-invasion": "Unidentified organic mass detected! Be prepared the for the alien invasion!",
+    "bm-txt-ufo": "Unidentified flying object detected! Immediate action required!"
+  },
   "entity-name": {
     "bm-large-tunnel": "Large tunnel",
     "bm-spawner": "Underground hole",
