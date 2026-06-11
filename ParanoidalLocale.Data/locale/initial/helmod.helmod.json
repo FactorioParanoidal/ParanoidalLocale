@@ -1,4 +1,7 @@
 {
+  "[FactorioLocaleSync.DefaultSectionKey]": {
+    "helmod_planner-command": "Planner"
+  },
   "helmod_si": {
     "seconde": "__1__s",
     "minute": "__1__min",
@@ -421,8 +424,7 @@
     "title": "Quality Probability",
     "module-amount": "Module amount",
     "bonus-probability": "Bonus probability %",
-    "total-control": "Total\\nControl",
-    "percent-value": "__1__%"
+    "total-control": "Total\\nControl"
   },
   "tooltip": {
     "technology-recipe": "Technology recipe",
@@ -485,7 +487,6 @@
     "recipe-by-hand": "(By hand)",
     "recipe-unsearched": "(Unsearched)",
     "cargo-info": "__1__ \\n__2__\\n__3__",
-    "cargo-info-element": "__1__: __2__",
     "technology-info": "__1__\\nLevel: __2__ \\nFormula: __3__ \\nIngredients: __4__",
     "share-mod": "Allow __1__ in multiplayer",
     "unlink-element": "Link/Unlink this recipe",
