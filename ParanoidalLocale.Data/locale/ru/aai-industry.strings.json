@@ -1,4 +1,7 @@
 {
+  "[FactorioLocaleSync.DefaultSectionKey]": {
+    "basic-insulating-board": "Основная изолирующая панель"
+  },
   "item-name": {
     "stone-tablet": "Каменная Табличка",
     "motor": "Мотор",

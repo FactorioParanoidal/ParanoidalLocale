@@ -1,4 +1,7 @@
 {
+  "[FactorioLocaleSync.DefaultSectionKey]": {
+    "memory-unit-corruption": "WARNING: Entity corruption detected for a memory unit containing __1__ __2__."
+  },
   "mod-name": {
     "fluid-memory-storage": "Fluid Memory Storage"
   },

@@ -1,4 +1,7 @@
 {
+  "[FactorioLocaleSync.DefaultSectionKey]": {
+    "centrifuge": "Centrifuge __1__"
+  },
   "item-group-name": {
     "fortifications": "Fortifications",
     "equipment": "Equipment",

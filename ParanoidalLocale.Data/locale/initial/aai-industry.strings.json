@@ -1,4 +1,7 @@
 {
+  "[FactorioLocaleSync.DefaultSectionKey]": {
+    "basic-insulating-board": "Basic Insulating Board"
+  },
   "item-name": {
     "stone-tablet": "Stone tablet",
     "motor": "Single-cylinder engine",

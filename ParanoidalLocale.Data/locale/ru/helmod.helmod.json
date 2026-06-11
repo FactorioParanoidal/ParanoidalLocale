@@ -1,4 +1,7 @@
 {
+  "[FactorioLocaleSync.DefaultSectionKey]": {
+    "helmod_planner-command": "Планировщик"
+  },
   "helmod_si": {
     "seconde": "__1__с",
     "minute": "__1__мин",

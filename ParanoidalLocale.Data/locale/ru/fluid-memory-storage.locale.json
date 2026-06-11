@@ -1,4 +1,7 @@
 {
+  "[FactorioLocaleSync.DefaultSectionKey]": {
+    "memory-unit-corruption": "ВНИМАНИЕ: Обнаружено повреждение блока памяти, содержащего __1__ __2__."
+  },
   "mod-name": {},
   "mod-description": {},
   "entity-name": {

@@ -1,4 +1,8 @@
 {
+  "[FactorioLocaleSync.DefaultSectionKey]": {
+    "research-required": "Необходимо исследование",
+    "factory-cant-be-mined": "Заводские строения не могут быть разрушены другими модами"
+  },
   "mod-name": {},
   "mod-description": {
     "factorissimo-2-notnotmelon": "Factorissimo добавляет заводские строения в Factorio. Постройте их, зайдите внутрь, стройте ваши фабрики внутри! Теперь обновлен для Space Age!"
