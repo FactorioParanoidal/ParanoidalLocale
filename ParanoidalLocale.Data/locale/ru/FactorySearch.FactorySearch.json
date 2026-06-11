@@ -30,6 +30,7 @@
   },
   "search-gui": {
     "keep-open": "Держать открытым",
+    "distance": "Расстояние",
     "all-surfaces": "Все поверхности",
     "all-qualities": "Всё качество",
     "explanation": "Выберите предмет для поиска",
