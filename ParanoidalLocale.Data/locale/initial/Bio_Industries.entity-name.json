@@ -1,7 +1,6 @@
 {
   "entity-name": {
     "bi-arboretum": "Terraformer",
-    "bi-arboretum-hidden-radar": "__ENTITY__bi-arboretum__ (__ENTITY__radar__)",
     "bi-bio-farm": "Bio farm",
     "bi-bio-garden": "Bio garden",
     "bi-bio-garden-large": "Large Bio garden",

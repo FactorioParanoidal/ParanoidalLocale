@@ -42,9 +42,7 @@
     "label-caption": "How many slots to limit this type of chest to.",
     "label-reset": "Remove all limits for this item."
   },
-  "belttools": {
-    "inserted": "+__2__ __1__ (__3__)"
-  },
+  "belttools": {},
   "beltbrush-gui": {
     "label-caption": "Belt Lanes"
   },

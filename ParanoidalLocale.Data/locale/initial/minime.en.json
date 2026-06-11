@@ -61,8 +61,7 @@
     "minime-toggle-selector-gui": "Toggle character selector GUI"
   },
   "minime-misc": {
-    "base-character": "Default character",
-    "bobclass-name": "__1__ (__2__)"
+    "base-character": "Default character"
   },
   "minime-GUI": {
     "gui-name-charselector-caption": "Choose your appearance:",
@@ -108,7 +107,6 @@
     "command-minime-uninstall-help": "[color=yellow]Usage: /__1__ (Can only be used by admins!)\\nSwitch character of all players in character mode to default character. Remove all miniMAXIme guis. Remove all surfaces for dummy and preview characters. Disable all event handlers.[/color]"
   },
   "minime-command-errors": {
-    "error": "[color=yellow][ERROR] __1__[/color]",
     "show-dummy-inventory-no-player": "Invalid player specification: __1__!",
     "show-dummy-inventory-no-char": "Player __1__ has no dummy character!",
     "show-detached-char-inventory-no-player": "Invalid player specification: __1__!",

@@ -81,11 +81,5 @@
     "reskins-bobs-colored-circuits-on": "\\n\\n[font=default-semibold]Enabled[/font]:\\n[img=ar-basic-circuit-board-colored][img=ar-basic-electronic-circuit-board-colored][img=ar-electronic-circuit-board-colored][img=ar-electronic-logic-board-colored][img=ar-electronic-processing-board-colored]\\n[font=default-small]Note: the tier color preview is based on current tier mapping and color settings.[/font]"
   },
   "reskins-updates": {},
-  "reskins-defaults": {
-    "basic-belts-color": "[color=#bfbfbf][font=default-bold]191, 191, 191[/font][/color]",
-    "fusion-robot-color": "[color=#e5e5e5][font=default-bold]229, 229, 229[/font][/color]",
-    "standard-furnace-color": "[color=#ffb700][font=default-bold]255, 183, 0[/font][/color]",
-    "mixing-furnace-color": "[color=#00bfff][font=default-bold]0, 191, 255[/font][/color]",
-    "chemical-furnace-color": "[color=#f21f0c][font=default-bold]242, 31, 12[/font][/color]"
-  }
+  "reskins-defaults": {}
 }

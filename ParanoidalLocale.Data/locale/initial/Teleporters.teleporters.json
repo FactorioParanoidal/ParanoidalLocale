@@ -7,7 +7,6 @@
     "teleporter-network": "Teleporter network",
     "cant-add-tag": "You can not add a chart tag with the teleporter icon.",
     "cant-change-icon": "You can not modify a teleporter chart tags icon.",
-    "rename-teleporter": "Rename teleporter",
-    "search": "__CONTROL__focus-search__"
+    "rename-teleporter": "Rename teleporter"
   }
 }

@@ -111,8 +111,7 @@
     "Stuckez12-radiation-biters": "With the rise of pollution and your expansion in production, the biters have evolved with the power of [item=uranium-ore] to emit radiation.\\n\\nEnemies including [entity=big-biter], [entity=big-spitter], [entity=behemoth-biter] and [entity=behemoth-spitter] emit constant radiation whilst existing making it harder to expand and conquer the world.\\nBut beware when killing them as their corpses will still emit radiation although not as powerful."
   },
   "item-tag": {
-    "Stuckez12-radiation-item-tag": "Radiation",
-    "Stuckez12-radiation-item-value": "__1__"
+    "Stuckez12-radiation-item-tag": "Radiation"
   },
   "achievement-name": {
     "Stuckez12-Radiation-achievement-that-tickles": "That Tickles",

@@ -1,9 +1,5 @@
 {
   "entity-name": {
-    "bob-mining-drill-1": "__ENTITY__electric-mining-drill__ 2",
-    "bob-mining-drill-2": "__ENTITY__electric-mining-drill__ 3",
-    "bob-mining-drill-3": "__ENTITY__electric-mining-drill__ 4",
-    "bob-mining-drill-4": "__ENTITY__electric-mining-drill__ 5",
     "bob-area-mining-drill-1": "Electric large area mining drill 1",
     "bob-area-mining-drill-2": "Electric large area mining drill 2",
     "bob-area-mining-drill-3": "Electric large area mining drill 3",
@@ -22,25 +18,7 @@
   "entity-description": {
     "bob-steam-mining-drill": "The steam powered mining drill will scale its speed and energy consumption to the temperature of the steam you pipe into it.\\nExpect it to operate at 20% on steam from your first boiler.\\n20% is 120kW for 0.4/s base mining speed."
   },
-  "item-name": {
-    "bob-mining-drill-1": "__ENTITY__bob-mining-drill-1__",
-    "bob-mining-drill-2": "__ENTITY__bob-mining-drill-2__",
-    "bob-mining-drill-3": "__ENTITY__bob-mining-drill-3__",
-    "bob-mining-drill-4": "__ENTITY__bob-mining-drill-4__",
-    "bob-area-mining-drill-1": "__ENTITY__bob-area-mining-drill-1__",
-    "bob-area-mining-drill-2": "__ENTITY__bob-area-mining-drill-2__",
-    "bob-area-mining-drill-3": "__ENTITY__bob-area-mining-drill-3__",
-    "bob-area-mining-drill-4": "__ENTITY__bob-area-mining-drill-4__",
-    "bob-pumpjack-1": "__ENTITY__bob-pumpjack-1__",
-    "bob-pumpjack-2": "__ENTITY__bob-pumpjack-2__",
-    "bob-pumpjack-3": "__ENTITY__bob-pumpjack-3__",
-    "bob-pumpjack-4": "__ENTITY__bob-pumpjack-4__",
-    "bob-water-miner-1": "__ENTITY__water-miner-1__",
-    "bob-water-miner-2": "__ENTITY__water-miner-2__",
-    "bob-water-miner-3": "__ENTITY__water-miner-3__",
-    "bob-water-miner-4": "__ENTITY__water-miner-4__",
-    "bob-water-miner-5": "__ENTITY__water-miner-5__"
-  },
+  "item-name": {},
   "technology-name": {
     "bob-drills": "Mining drills research",
     "bob-area-drills": "Large area mining drills research",

@@ -35,7 +35,6 @@
     "memory-unit-power-usage": "A multiplier for how much power drain the memory unit uses. The formula is [font=default-small]1MW + (ceil(item count / stack size) ^ 0.35) * multiplier[/font]\\nFor fluids the stack size will be set to 1000.\\nDefault value: 300kw"
   },
   "big-numbers": {
-    "1": "__1__",
     "2": "__1__k",
     "3": "__1__M",
     "4": "__1__G",

@@ -10,7 +10,6 @@
     "is-event-active-false": "__1__ is currently NOT listening to event \"__2__\" (__3__)."
   },
   "PiClib-command-errors": {
-    "error": "[color=yellow][ERROR] __1__[/color]",
     "is-event-active-invalid-event": "Event \"__1__\" doesn't exist!",
     "is-event-active-no-args": "You must specify an event (integer or string)!"
   }

@@ -74,9 +74,6 @@
     "prefix-blue": "Express",
     "prefix-purple": "Turbo",
     "prefix-green": "Ultimate",
-    "bob-storage-tank-2": "__ENTITY__storage-tank__ 2",
-    "bob-storage-tank-3": "__ENTITY__storage-tank__ 3",
-    "bob-storage-tank-4": "__ENTITY__storage-tank__ 4",
     "bob-locomotive-2": "Locomotive MK2",
     "bob-locomotive-3": "Locomotive MK3",
     "bob-armoured-locomotive": "Armoured locomotive",
@@ -111,11 +108,7 @@
     "bob-tungsten-pipe-to-ground": "Tungsten pipe-to-ground",
     "bob-pump-2": "Pump 2",
     "bob-pump-3": "Pump 3",
-    "bob-pump-4": "Pump 4",
-    "bob-repair-pack-2": "__ITEM__repair-pack__ 2",
-    "bob-repair-pack-3": "__ITEM__repair-pack__ 3",
-    "bob-repair-pack-4": "__ITEM__repair-pack__ 4",
-    "bob-repair-pack-5": "__ITEM__repair-pack__ 5"
+    "bob-pump-4": "Pump 4"
   },
   "fluid-name": {},
   "entity-name": {
@@ -181,9 +174,6 @@
     "bob-ultimate-underground-belt": "Ultimate underground belt",
     "bob-ultimate-splitter": "Ultimate splitter",
     "aai-ultimate-loader": "Ultimate loader",
-    "bob-storage-tank-2": "__ENTITY__storage-tank__ 2",
-    "bob-storage-tank-3": "__ENTITY__storage-tank__ 3",
-    "bob-storage-tank-4": "__ENTITY__storage-tank__ 4",
     "bob-storage-tank-all-corners": "__ENTITY__storage-tank__ all corners",
     "bob-storage-tank-all-corners-2": "__ENTITY__storage-tank__ 2 all corners",
     "bob-storage-tank-all-corners-3": "__ENTITY__storage-tank__ 3 all corners",
@@ -250,8 +240,7 @@
     "bob-long-inserters": "Long inserters",
     "inserter-capacity-bonus": "Bulk inserter capacity bonus",
     "inserter-stack-size-bonus": "Inserter capacity bonus",
-    "bob-infinite-character-logistic-trash-slots": "Infinite character logistic trash slots",
-    "bob-repair-pack": "__ITEM__repair-pack__"
+    "bob-infinite-character-logistic-trash-slots": "Infinite character logistic trash slots"
   },
   "technology-description": {
     "bob-robots": "Logistic robots are a flexible alternative to conveyor belts.",
