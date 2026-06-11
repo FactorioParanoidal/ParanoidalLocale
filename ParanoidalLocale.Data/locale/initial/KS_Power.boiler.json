@@ -1,4 +1,7 @@
 {
+  "[FactorioLocaleSync.DefaultSectionKey]": {
+    "burn": "Burn __1__"
+  },
   "item-name": {
     "oil-steam-boiler": "Oil Boiler"
   },
