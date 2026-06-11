@@ -72,7 +72,13 @@ public static class ModLocalizationUtils
     public static void WriteModInitialLocaleFile(ModLocaleFile file, AbsolutePath path, ILogger? logger)
     {
         var filePath = file.GetTargetPath(path);
-        var content = JsonSerializer.Serialize(file.GetContent(), JsonSerializerOptions);
+        var filtered = file.GetContent()
+            .ToDictionary(
+                section => section.Key,
+                section => (IDictionary<string, string>)section.Value
+                    .Where(kv => !LocalizationPlaceholders.IsPlaceholderOnly(kv.Value))
+                    .ToDictionary(kv => kv.Key, kv => kv.Value));
+        var content = JsonSerializer.Serialize(filtered, JsonSerializerOptions);
         File.WriteAllText(filePath, content);
         logger?.Debug("Mod {ModName}, file {FileName}, with {LocaleName} written to {FilePath}", file.Locale.Mod.Name,
             file.FileName, file.Locale.LocaleName, filePath);
