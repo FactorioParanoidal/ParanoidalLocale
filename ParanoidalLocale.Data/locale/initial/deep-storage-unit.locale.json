@@ -1,4 +1,7 @@
 {
+  "[FactorioLocaleSync.DefaultSectionKey]": {
+    "memory-unit-corruption": "WARNING: Entity corruption detected for a memory unit containing __1__ __2__."
+  },
   "mod-name": {
     "deep-storage-unit": "Memory Storage"
   },
@@ -45,7 +48,6 @@
     "item-not-allowed-in-this-container-item": "This center panel does nothing. It's required to render the inventory GUI. Please ignore."
   },
   "big-numbers": {
-    "1": "__1__",
     "2": "__1__k",
     "3": "__1__M",
     "4": "__1__G",
