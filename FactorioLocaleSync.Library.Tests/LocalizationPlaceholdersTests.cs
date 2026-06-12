@@ -7,6 +7,7 @@ public class LocalizationPlaceholdersTests
     [Theory]
     // Single built-in with a name, nothing else but a separator / whitespace.
     [InlineData("__ITEM__iron-plate__")]
+    [InlineData("__ITEM__atomic-artillery-shell__")]
     [InlineData("__ENTITY__angels-cab__")]
     [InlineData("  __FLUID__water__  ")]
     // Several placeholders glued together with punctuation only.

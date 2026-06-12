@@ -228,9 +228,12 @@ public static class ModLocalizationUtils
         foreach (var (sectionKey, sectionContent) in initialLocalization)
         {
             var section = new Dictionary<string, string>();
-            result[sectionKey] = section;
-            foreach (var (localeKey, _) in sectionContent)
+            foreach (var (localeKey, englishValue) in sectionContent)
             {
+                // Skip keys that carry no translatable text in the source (placeholder-only). They are
+                // omitted from initial/ too, so they must not leak into the target locale either.
+                if (LocalizationPlaceholders.IsPlaceholderOnly(englishValue)) continue;
+
                 // 1. already in ru/ file
                 if (localeDictionary.TryGetValue(sectionKey, out var existingSection)
                     && existingSection.TryGetValue(localeKey, out var existing)
@@ -247,6 +250,10 @@ public static class ModLocalizationUtils
                 if (alreadyLocalized != null && !string.IsNullOrWhiteSpace(alreadyLocalized))
                     section[localeKey] = alreadyLocalized;
             }
+
+            // Drop sections that ended up without any translatable keys to keep the file clean and
+            // structurally aligned with the filtered initial/ file.
+            if (section.Count > 0) result[sectionKey] = section;
         }
 
         var content = JsonSerializer.Serialize(result, JsonSerializerOptions);
