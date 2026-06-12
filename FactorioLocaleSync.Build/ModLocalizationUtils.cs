@@ -78,8 +78,7 @@ public static class ModLocalizationUtils
                 section => (IDictionary<string, string>)section.Value
                     .Where(kv => !LocalizationPlaceholders.IsPlaceholderOnly(kv.Value))
                     .ToDictionary(kv => kv.Key, kv => kv.Value));
-        var content = JsonSerializer.Serialize(filtered, JsonSerializerOptions);
-        File.WriteAllText(filePath, content);
+        WriteOrDeleteIfEmpty(filtered, filePath, logger);
         logger?.Debug("Mod {ModName}, file {FileName}, with {LocaleName} written to {FilePath}", file.Locale.Mod.Name,
             file.FileName, file.Locale.LocaleName, filePath);
     }
@@ -88,6 +87,31 @@ public static class ModLocalizationUtils
     {
         var names = mods.Select(info => info.InfoJson.InternalName).OrderBy(x => x).ToHashSet();
         File.WriteAllText(path, JsonSerializer.Serialize(names, JsonSerializerOptions));
+    }
+
+    /// <summary>True when the locale dictionary holds no keys in any section.</summary>
+    static bool IsEmptyLocalization(IDictionary<string, IDictionary<string, string>> content)
+        => content.Values.All(section => section.Count == 0);
+
+    /// <summary>
+    ///     Writes <paramref name="content" /> to <paramref name="filePath" />, or, when it has no keys at all,
+    ///     skips writing and removes a pre-existing file so empty <c>{}</c> files never linger on disk.
+    /// </summary>
+    static void WriteOrDeleteIfEmpty(IDictionary<string, IDictionary<string, string>> content, string filePath,
+        ILogger? logger)
+    {
+        if (IsEmptyLocalization(content))
+        {
+            if (File.Exists(filePath))
+            {
+                logger?.Information("Deleting empty locale file {File}", filePath);
+                File.Delete(filePath);
+            }
+
+            return;
+        }
+
+        File.WriteAllText(filePath, JsonSerializer.Serialize(content, JsonSerializerOptions));
     }
 
     public static void CleanStaleFiles(IEnumerable<ModLocale> modLocales,
@@ -210,13 +234,13 @@ public static class ModLocalizationUtils
         foreach (var (_, file) in files)
         {
             logger?.Debug("Appending already localized content to {FilePath}", file.GetTargetPath(targetLocalePath));
-            AppendAlreadyLocalizedContentToFile(file, mergedLocalizations, targetLocalePath);
+            AppendAlreadyLocalizedContentToFile(file, mergedLocalizations, targetLocalePath, logger);
         }
     }
 
     static void AppendAlreadyLocalizedContentToFile(ModLocaleFile file,
         IReadOnlyDictionary<string, IReadOnlyDictionary<string, string>> existedLocalization,
-        AbsolutePath targetLocalePath)
+        AbsolutePath targetLocalePath, ILogger? logger)
     {
         var filePath = file.GetTargetPath(targetLocalePath);
         var localeDictionary = File.Exists(filePath)
@@ -256,8 +280,8 @@ public static class ModLocalizationUtils
             if (section.Count > 0) result[sectionKey] = section;
         }
 
-        var content = JsonSerializer.Serialize(result, JsonSerializerOptions);
-        File.WriteAllText(filePath, content);
+        WriteOrDeleteIfEmpty(result.ToDictionary(s => s.Key, s => (IDictionary<string, string>)s.Value), filePath,
+            logger);
     }
 
     public static void ExportDictionaryJsonsToFactorioCfg(AbsolutePath fromDirectory,
