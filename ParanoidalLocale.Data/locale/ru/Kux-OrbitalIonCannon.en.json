@@ -45,8 +45,6 @@
     "ion-cannon-targeter": "Нацеливающее устройство для ионной пушки",
     "ion-cannon-target": "Число выстрелов ионной пушки"
   },
-  "recipe-name": {},
-  "recipe-description": {},
   "technology-name": {
     "orbital-ion-cannon": "Орбитальная ионная пушка",
     "auto-targeting": "Автоматическое наведение"

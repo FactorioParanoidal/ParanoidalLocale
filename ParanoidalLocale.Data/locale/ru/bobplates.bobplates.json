@@ -209,7 +209,6 @@
     "bob-thorium-reactor": "Ториевый реактор",
     "bob-deuterium-reactor": "Дейтериевый реактор"
   },
-  "entity-description": {},
   "item-group-name": {
     "bob-resource-products": "Материалы Боба"
   },
@@ -305,9 +304,6 @@
     "bobmods-plates-convert-recipes": "Если включено, то будут добавлены дополнительные рецепты для конвертации между различными типами печи.",
     "bobmods-plates-expensive-electrolysis": "Если включено, это увеличит энергозатраты на Электролиз. Получаемый в процессе электролиза водород станет невыгодным для использования его в качестве топлива."
   },
-  "achievement-name": {},
-  "achievement-description": {},
-  "item-limitation": {},
   "fuel-category-name": {
     "uranium": "Уран",
     "bob-thorium": "Торий",

@@ -1,5 +1,4 @@
 {
-  "[FactorioLocaleSync.DefaultSectionKey]": {},
   "item-group-name": {
     "fortifications": "Укрепления",
     "equipment": "Снаряжение",
@@ -8,7 +7,6 @@
   "entity-name": {
     "neurotoxin-cloud": "Облако нейротоксинов"
   },
-  "fluid-name": {},
   "item-name": {
     "clowns-plate-osmium": "Осмиевый слиток",
     "clowns-plate-depleted-uranium": "Слиток обеднённого урана",
@@ -46,7 +44,6 @@
     "garden-mutation": "Мутации садов",
     "centrifuging": "Продвинутое центрифугирование"
   },
-  "item-description": {},
   "mod-setting-name": {
     "fluid-cleanup": "Переместить жидкости",
     "MCP_enable_centrifuges": "Включить центрифуги MK2 и MK3"

@@ -4,6 +4,5 @@
   },
   "mod-setting-description": {
     "unpollock-decorative-rate": "Частота появления декораций относительно частоты таковых в ванили. Минимум 0, максимум 1. По умолчанию 0,4."
-  },
-  "string-mod-setting": {}
+  }
 }

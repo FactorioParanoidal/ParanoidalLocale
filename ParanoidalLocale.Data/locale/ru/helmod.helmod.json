@@ -418,7 +418,6 @@
     "tab-global": "Глобальный",
     "tab-local": "Локальный"
   },
-  "helmod_quality-panel": {},
   "tooltip": {
     "technology-recipe": "Рецепт технологии",
     "resource-recipe": "Рецепт ресурса",
@@ -478,7 +477,6 @@
     "recipe-by-hand": "(Вручную)",
     "recipe-unsearched": "(Не найден)",
     "cargo-info": "__1__ \\n__2__\\n__3__",
-    "cargo-info-element": "__1__: __2__",
     "technology-info": "__1__\\nУровень: __2__ \\nФормула: __3__ \\nИнгредиенты: __4__",
     "share-mod": "Разрешить __1__ в сетевой игре",
     "unlink-element": "Привязать/отвязать рецепт",

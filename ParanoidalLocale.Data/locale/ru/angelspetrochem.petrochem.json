@@ -1,5 +1,4 @@
 {
-  "fluid-name": {},
   "tooltip-description": {
     "chemical-formula": "[font=default-semibold][color=1,0.9,0.75]Хим.формула:[/color][/font] __1__"
   },
@@ -12,7 +11,6 @@
     "angels-electrode-used": "Регенерация использованного электрода",
     "angels-sulfur-air-scrubbing": "Переработка известкового фильтра: Кислотный газ"
   },
-  "item-group-name": {},
   "autoplace-control-names": {
     "angels-natural-gas": "Газовая скважина",
     "crude-oil": "Многофазная нефть"
@@ -101,6 +99,5 @@
   },
   "mod-setting-name": {
     "angels-show-chemical-formula": "Показывать хим.формулу в подсказках"
-  },
-  "mod-setting-description": {}
+  }
 }

@@ -1,7 +1,4 @@
 {
-  "entity-name": {},
-  "entity-description": {},
-  "autoplace-control-names": {},
   "item-name": {
     "angels-iron-nugget": "Железный самородок",
     "angels-iron-pebbles": "Железный гравий",
@@ -10,9 +7,6 @@
     "angels-copper-pebbles": "Медный гравий",
     "angels-copper-slag": "Медный шлак"
   },
-  "item-description": {},
-  "fluid-name": {},
-  "recipe-category-name": {},
   "recipe-name": {
     "angels-ore1-crushed-processing": "Сортировка дробленого сапфирита",
     "angels-ore2-crushed-processing": "Сортировка дробленого дживолита",
@@ -49,11 +43,5 @@
     "angels-slag_processing_2": "Переработка минерального шлама в __1__ и __2__",
     "angels-slag_processing_3": "Переработка минерального шлама в __1__, __2__, и __3__",
     "angels-slag_processing_1": "Переработка минерального шлама в __1__"
-  },
-  "recipe-description": {},
-  "item-group-name": {},
-  "technology-name": {},
-  "technology-description": {},
-  "mod-setting-name": {},
-  "mod-setting-description": {}
+  }
 }

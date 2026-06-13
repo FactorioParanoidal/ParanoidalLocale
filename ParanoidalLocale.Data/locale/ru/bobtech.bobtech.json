@@ -3,12 +3,8 @@
     "bob-advanced-research": "Продвинутые исследования",
     "bob-alien-research": "Инопланетные исследования",
     "bob-electricity": "Электрификация",
-    "bob-lab": "__ENTITY__lab__",
-    "bob-burner-lab": "__ENTITY__bob-burner-lab__",
-    "bob-steam-engine": "__ENTITY__steam-engine__",
-    "bob-advanced-logistic-science-pack": "__ITEM__bob-advanced-logistic-science-pack__"
+    "bob-steam-engine": "__ENTITY__steam-engine__"
   },
-  "technology-description": {},
   "entity-name": {
     "bob-burner-generator": "Топливный электрогенератор",
     "bob-burner-lab": "Твердотопливная лаборатория",
@@ -34,7 +30,5 @@
   },
   "mod-setting-description": {
     "bobmods-burnerphase": "Locks non-burner powered technology behind research.\\nWarning:\\nThis setting is not designed to work with with AAI Industry, which also adds a lot of early stage research. Key conflicting areas include the fact that this mod sees Steam power as something that comes between Burner and Electricity (See steam powered assembling machine and mining drill as examples), where AAI changes the offshore pump to require electricity, and the boiler, and steam engine are a more advanced method to get electricity after the burner electric generator.\\nIn some situations, the game fails to load if this option is turned on when AAI Industry is installed."
-  },
-  "achievement-name": {},
-  "achievement-description": {}
+  }
 }

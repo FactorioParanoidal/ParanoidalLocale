@@ -1,6 +1,4 @@
 {
-  "entity-name": {},
-  "entity-description": {},
   "item-name": {
     "raw-fish": "Рыба Факториана",
     "angels-bio-yield-module": "Аграрный модуль",
@@ -15,11 +13,6 @@
     "angels-bio-yield-module-2": "Модуль повышения производительности, используемый только в сельскохозпроизводстве.",
     "angels-bio-yield-module-3": "Модуль повышения производительности, используемый только в сельскохозпроизводстве."
   },
-  "fluid-name": {},
-  "recipe-name": {},
-  "tile-name": {},
-  "recipe-category-name": {},
-  "item-group-name": {},
   "technology-name": {
     "angels-bio-yield-module": "Аграрный модуль",
     "angels-bio-yield-module-2": "Аграрный модуль 2",
@@ -28,12 +21,10 @@
   "technology-description": {
     "angels-bio-yield-module": "Специализированный модуль, повышающий производительность, но используемый только для сельскохозяйственных рецептов."
   },
-  "recipe-description": {},
   "mod-setting-name": {
     "angels-bio-tile-pollution-absorbtion-multiplier": "Множитель абсорбции биологически активных клеток."
   },
   "mod-setting-description": {
     "angels-bio-tile-pollution-absorbtion-multiplier": "Повышает поглощение загрязнения, чтобы уменьшить уровень загрязнения."
-  },
-  "cant_insert": {}
+  }
 }

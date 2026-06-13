@@ -15,7 +15,6 @@
     "bob-small-alien-artifact-blue": "Малый синий инопланетный материал",
     "bob-small-alien-artifact-purple": "Малый розовый инопланетный материал"
   },
-  "item-description": {},
   "entity-name": {
     "bob-biter-spawner": "Большой улей кусак",
     "bob-spitter-spawner": "Большой улей плевак",
@@ -41,10 +40,6 @@
     "bob-giant-fire-spitter": "Гигантский огненный плевака",
     "bob-big-fire-worm-turret": "Большой огненый червь"
   },
-  "entity-description": {},
-  "technology-name": {},
-  "technology-description": {},
-  "factoriopedia-description": {},
   "damage-type-name": {
     "bob-pierce": "Бронебойный",
     "bob-plasma": "Плазменный"

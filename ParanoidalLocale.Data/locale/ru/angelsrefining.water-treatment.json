@@ -1,5 +1,4 @@
 {
-  "fluid-name": {},
   "recipe-name": {
     "angels-water-void-purified": "Опустошить от очищенной воды",
     "angels-water-void-saline": "Опустошить от соленой воды",
@@ -11,8 +10,6 @@
   "item-group-name": {
     "angels-fluid-control": "Разливка и контроль жидкости"
   },
-  "entity-name": {},
-  "entity-description": {},
   "item-name": {
     "filled-barrel": "__1__ бочка"
   },
@@ -21,7 +18,5 @@
   },
   "technology-description": {
     "angels-fluid-barreling": "Разливка в бочки"
-  },
-  "cant_insert": {},
-  "tooltip-description": {}
+  }
 }

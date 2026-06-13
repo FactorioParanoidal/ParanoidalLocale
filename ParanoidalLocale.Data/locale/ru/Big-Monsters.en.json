@@ -1,5 +1,4 @@
 {
-  "[FactorioLocaleSync.DefaultSectionKey]": {},
   "entity-name": {
     "bm-spawner": "Подземное логово",
     "bm-spawner-corpse": "Подземное логово (разрушен)",
@@ -19,7 +18,6 @@
     "bm-worm-boss-fire-shooter": "КОРОЛЕВСКИЙ КИСЛОТНЫЙ ЧЕРВЬ",
     "bm-volcano": "Вулкан"
   },
-  "entity-description": {},
   "mod-setting-name": {
     "bm-big-enemy-hp-multiplier": "Big enemies HP multiplyer",
     "bm-worm-enemy-hp-multiplier": "Worms HP multiplyer",
@@ -58,6 +56,5 @@
     "bm-allow-nuker": "Part of the humam soldiers group. Equiped with small atomic bomb  missile",
     "bm-difficulty-level": "1-10",
     "bm-events-when-peaceful": "Если включено, события будут происходить даже в мирном режиме"
-  },
-  "item-name": {}
+  }
 }

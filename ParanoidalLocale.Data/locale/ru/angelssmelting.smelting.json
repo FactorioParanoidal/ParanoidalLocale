@@ -1,6 +1,4 @@
 {
-  "fluid-name": {},
-  "recipe-name": {},
   "item-group-name": {
     "angels-smelting": "Металлургическая плавка",
     "angels-casting": "Металлургическая отливка"
@@ -39,7 +37,6 @@
     "angels-roll-gold": "Золотой рулон",
     "angels-wire-gold": "Золотая проволока",
     "angels-wire-coil-gold": "Золотая катушка проволоки",
-    "bob-gilded-copper-cable": "Позолоченный медный провод",
     "angels-roll-iron": "Железный рулон",
     "angels-rod-stack-iron": "Связка железных прутов",
     "angels-plate-lead": "Свинцовый слиток",
@@ -158,8 +155,5 @@
     "angels-cobalt-steel-smelting": "Улучшенное сплавление кобальтовой стали",
     "angels-nitinol-smelting": "Улучшенное сплавление нитинола",
     "bob-alloy-processing": "Исследование возможности смешивания металлов для создания сплавов."
-  },
-  "tile-name": {},
-  "setting-name": {},
-  "setting-description": {}
+  }
 }

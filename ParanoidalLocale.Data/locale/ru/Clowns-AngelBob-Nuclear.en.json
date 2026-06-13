@@ -3,14 +3,12 @@
     "uranium-238": "Уран (0% U-235, обеднённый)",
     "uranium-235": "Уран (80% U-235, оружейный)"
   },
-  "override-technology-name": {},
   "item-name": {
     "critical-mass": "Критическая масса",
     "thermonuclear-bomb": "Термоядерная бомба",
     "artillery-shell-thermonuclear": "Тактическая термоядерная боеголовка",
     "artillery-shell-nuclear": "Тактическая ядерная боеголовка"
   },
-  "fluid-name": {},
   "recipe-name": {
     "thorium-processing": "Переработка тория",
     "thorium-fuel-cell": "Ториевый топливный элемент",
@@ -24,7 +22,6 @@
     "depleted-uranium-reprocessing": "Переработка обеднённого урана",
     "radioactive-waste-water-purification": "Очистка радиоактивной отработанной воды"
   },
-  "recipe-description": {},
   "technology-name": {
     "thorium-nuclear-power": "Ядерная энергия изотопов Тория",
     "thorium-nuclear-fuel-reprocessing": "Переработка ториевого ядерного топлива",

@@ -9,7 +9,6 @@
     "angels-fissure": "Разлом земной коры",
     "angels-crystal-rock": "Кристаллизовавшийся камень"
   },
-  "entity-description": {},
   "autoplace-control-names": {
     "angels-ore1": "Сапфирит",
     "angels-ore2": "Дживолит",
@@ -32,14 +31,9 @@
   "item-description": {
     "angels-void": "Скорее всего что-то пошло не так. Если вы считаете, что это баг - шлите багрепорт на форум. Ну, вы поняли."
   },
-  "fluid-name": {},
-  "recipe-name": {},
-  "recipe-category-name": {},
   "item-group-name": {
     "angels-void": "Voids"
   },
-  "technology-name": {},
-  "technology-description": {},
   "mod-setting-name": {
     "angels-enable-auto-barreling": "Включить авто разлив жидкостей",
     "angels-enable-hide-void": "Отключить скрытие рецепта Void",
@@ -52,8 +46,6 @@
     "angels-starting-resource-ore5": "Стартовый ресурс __ENTITY__angels-ore5__",
     "angels-starting-resource-ore6": "Стартовый ресурс __ENTITY__angels-ore6__"
   },
-  "string-mod-setting": {},
-  "string-mod-setting-description": {},
   "mod-setting-description": {
     "angels-enable-auto-barreling": "Все рецепты разлива по бочкам будут спрятаны и \"Насос для обработки бочек\" будет переделан в тип печи",
     "angels-tryptophobia-friendly-stiratite": "Если включено, заменяет новый дырчатый стиль графики на классический сплошной.",

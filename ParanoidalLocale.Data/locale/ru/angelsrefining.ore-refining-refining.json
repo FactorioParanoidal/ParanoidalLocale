@@ -1,7 +1,4 @@
 {
-  "entity-name": {},
-  "entity-description": {},
-  "autoplace-control-names": {},
   "item-name": {
     "angels-ore1-crushed": "Дроблёный сапфирит",
     "angels-ore2-crushed": "Дроблёный дживолит",
@@ -80,13 +77,5 @@
     "angels-ore9-solution": "Медесодержащий раствор",
     "angels-ore9-slime": "Медесодержащая эссенция",
     "angels-ore9-anode-sludge": "Медесодержащий анодированный осадок"
-  },
-  "recipe-category-name": {},
-  "recipe-name": {},
-  "recipe-description": {},
-  "item-group-name": {},
-  "technology-name": {},
-  "technology-description": {},
-  "mod-setting-name": {},
-  "mod-setting-description": {}
+  }
 }

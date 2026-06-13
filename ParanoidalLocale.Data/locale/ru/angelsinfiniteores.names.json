@@ -45,12 +45,10 @@
     "infinite-ore-zinc": "Бесконечный цинк",
     "infinite-oil-sand": "Бесконечные нефтесодержащие пески"
   },
-  "item-name": {},
   "mod-setting-name": {
     "angels-infinite-yield": "Минимальная добыча для бесконечной руды",
     "angels-lower-infinite-yield": "Вероятность добавлена к результату добычи в режиме низкой доходности",
     "angels-enablefluidreq": "Включить жидкости для добычи бесконечных ресурсов (только angels)",
     "angels-keepuranacid": "Для добычи урановой руды требуется кислота"
-  },
-  "technology-name": {}
+  }
 }

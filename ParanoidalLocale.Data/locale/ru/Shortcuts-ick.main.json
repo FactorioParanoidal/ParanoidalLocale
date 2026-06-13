@@ -1,10 +1,7 @@
 {
-  "item-name": {},
   "Shortcuts-ick": {
     "driver-is-gunner": "Водитель — стрелок"
   },
-  "mod-setting-name": {},
-  "mod-setting-description": {},
   "string-mod-setting": {
     "artillery-toggle-disabled": "Выключено",
     "artillery-toggle-artillery-wagon": "Артиллерийский вагон",

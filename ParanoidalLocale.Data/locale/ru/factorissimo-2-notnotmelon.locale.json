@@ -3,7 +3,6 @@
     "research-required": "Необходимо исследование",
     "factory-cant-be-mined": "Заводские строения не могут быть разрушены другими модами"
   },
-  "mod-name": {},
   "mod-description": {
     "factorissimo-2-notnotmelon": "Factorissimo добавляет заводские строения в Factorio. Постройте их, зайдите внутрь, стройте ваши фабрики внутри! Теперь обновлен для Space Age!"
   },
@@ -11,7 +10,6 @@
     "factory-connection-indicator-settings": "Настройки подключения",
     "factory-packed": "__1__ (Упаковано)"
   },
-  "item-description": {},
   "entity-name": {
     "borehole-pump": "Скважинный насос",
     "factory-1": "Заводское строение 1",
@@ -30,7 +28,6 @@
     "factory-construction-chest": "Заводской строительный сундук",
     "factory-requester-chest": "Заводской сундук запроса"
   },
-  "description": {},
   "quality-tooltip": {
     "connections": "Увеличивает количество портов при более высоком качестве.",
     "fluid-transfer-speed": "Увеличивает скорость перекачки жидкостей при более высоком качестве."
@@ -123,14 +120,9 @@
     "Factorissimo2-hide-recursion-2": "Скрывает технологию Рекурсия 2, чтобы вы не смогли её исследовать.",
     "Factorissimo2-cheap-research": "Уменьшает стоимость исследований до ванильных значений без Space Age. Большинство технологий станут дешевле."
   },
-  "string-mod-setting": {},
-  "string-mod-setting-description": {},
-  "space-location-name": {},
-  "space-location-description": {},
   "surface-property-name": {
     "solar-power": "Солнечная энергия"
   },
-  "surface-property-unit": {},
   "command-help-message": {
     "give-lost-factory-buildings": "Дает вам все собранные фабричные здания в виде предметов, за исключением тех, которые уже есть в вашем инвентаре игрока. Использование этой команды, если элементы заводского строения на самом деле не исчезли, может привести к тому, что несколько элементов в вашем мире будут ссылаться на одно и то же заводское строение. Эти лишние элементы исчезнут с сообщением «Неверные заводские данные!» при размещении."
   }

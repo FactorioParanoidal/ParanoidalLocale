@@ -1,20 +1,9 @@
 {
-  "description": {},
   "entity-name": {
     "Schall-pickup-tower-R32": "__ITEM__Schall-pickup-tower-R32__",
-    "Schall-pickup-tower-R32-upper": "__ITEM__Schall-pickup-tower-R32-upper__",
-    "Schall-pickup-tower-R64": "__ITEM__Schall-pickup-tower-R64__",
-    "Schall-pickup-tower-R64-upper": "__ITEM__Schall-pickup-tower-R64-upper__"
-  },
-  "entity-description": {},
-  "technology-name": {
-    "Schall-pickup-tower": "__ITEM__Schall-pickup-tower__"
+    "Schall-pickup-tower-R64": "__ITEM__Schall-pickup-tower-R64__"
   },
   "technology-description": {
     "Schall-pickup-tower": "Технология позволит создать башню, которая автоматически собирет лежащие на земле предметы вокруг."
-  },
-  "mod-setting-name": {},
-  "mod-setting-description": {},
-  "mod-name": {},
-  "mod-description": {}
+  }
 }

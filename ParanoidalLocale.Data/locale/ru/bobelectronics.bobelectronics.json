@@ -30,11 +30,7 @@
     "bob-oil-processing": "Переработка сырой нефти",
     "bob-synthetic-wood": "Синтетическое дерево"
   },
-  "mod-setting-name": {},
   "technology-name": {
-    "bob-advanced-processing-unit": "Электронная вычислительная плата",
     "bob-wood-processing": "Обработка древесины"
-  },
-  "achievement-name": {},
-  "achievement-description": {}
+  }
 }
