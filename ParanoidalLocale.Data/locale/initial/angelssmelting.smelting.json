@@ -271,7 +271,6 @@
     "angels-clay-brick": "Clay brick",
     "angels-concrete-brick": "Concrete brick",
     "angels-reinforced-concrete-brick": "Reinforced concrete brick",
-    "angels-solder-mixture": "Solder mixture",
     "angels-solder": "Solder",
     "angels-roll-solder": "Solder coil",
     "angels-tin-ore": "Tin ore",
@@ -381,7 +380,6 @@
     "angels-zinc-casting": "Advanced zinc casting",
     "angels-steel-smelting": "Advanced steel smelting and casting",
     "angels-steel-casting": "Advanced steel casting",
-    "angels-solder-smelting-basic": "Basic solder casting",
     "angels-solder-smelting": "Advanced solder casting",
     "angels-bronze-smelting": "Advanced bronze smelting",
     "angels-brass-smelting": "Advanced brass smelting",
@@ -395,8 +393,7 @@
     "bob-electric-mixing-furnace": "Electric filtering furnace 1",
     "angels-multi-purpose-furnace-1": "Electric filtering furnace 2",
     "angels-multi-purpose-furnace-2": "Electric filtering furnace 3",
-    "bob-alloy-processing": "Bronze processing",
-    "bob-zinc-processing": "Brass processing"
+    "bob-alloy-processing": "Bronze processing"
   },
   "technology-description": {
     "angels-metallurgy": "Machines for advanced metallurgical smelting.",
@@ -455,7 +452,6 @@
     "angels-zinc-casting": "Additional processing steps to increase yield.",
     "angels-steel-smelting": "Advanced processing steps for efficient production of steel.",
     "angels-steel-casting": "Additional processing steps to increase yield.",
-    "angels-solder-smelting-basic": "Solder is a tin alloy with very low melting temperature.",
     "angels-solder-smelting": "Advanced processing steps for efficient production of solder.",
     "angels-bronze-smelting": "Advanced processing steps for the production of bronze.",
     "angels-brass-smelting": "Advanced processing steps for the production of brass.",

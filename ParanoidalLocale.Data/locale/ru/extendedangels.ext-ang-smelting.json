@@ -12,8 +12,14 @@
     "angels-gas-tungsten-hexachloride": "Газ гексафторида вольфрама"
   },
   "recipe-name": {
+    "angels-tungsten-carbide-smelting-1": "Порошковая смесь Карбита Вольфрама",
     "angels-tungsten-carbide-smelting-2": "Порошковая смесь Карбита Вольфрама",
     "angels-tungsten-carbide-smelting-3": "Порошковая смесь Карбита Вольфрама",
+    "angels-copper-tungsten-smelting-1": "Расплавленный Медный вольфрам",
+    "angels-copper-tungsten-smelting-2": "Расплавленный Медный вольфрам",
+    "angels-solid-tungsten-trioxide-smelting": "Триоксид вольфрама",
+    "angels-solid-tungsten-oxide-smelting-2": "Газ гексафторида вольфрама",
+    "angels-pellet-tungsten-smelting-2": "Вольфрамат натрия",
     "block-construction-0": "Конструкционный модуль 0"
   },
   "technology-name": {

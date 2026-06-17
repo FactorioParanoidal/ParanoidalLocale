@@ -54,5 +54,8 @@
   },
   "technology-name": {
     "mining-with-fluid": "Advanced mining"
+  },
+  "cant-build-reason": {
+    "mining-with-fluid-not-available": "Advanced mining not researched."
   }
 }

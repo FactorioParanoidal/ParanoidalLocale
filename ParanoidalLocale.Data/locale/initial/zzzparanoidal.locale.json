@@ -28,7 +28,11 @@
     "bi-bio-reactor-2": "Bioreactor MK2",
     "bi-bio-reactor-3": "Bioreactor MK3",
     "bob-nitinol-pipe": "Nitinol pipe",
-    "bob-nitinol-pipe-to-ground": "Nitinol pipe-to-ground"
+    "bob-nitinol-pipe-to-ground": "Nitinol pipe-to-ground",
+    "hiend_loco": "Maglev locomotive",
+    "hiend_wagon": "Maglev cargo wagon",
+    "hiend_fluid_wagon": "Maglev fluid wagon",
+    "super_charger": "Battery charger MK4"
   },
   "item-description": {
     "orbital-solar-collector": "A satellite capable of capturing up to 1000 megawatts of power from a nearby star in a synchronous orbit and relaying it to the planet's surface to a ground transceiver station.",
@@ -79,6 +83,10 @@
     "artillery-turret-prototype": "Artillery Cannon Prototype",
     "yir_usl": "Locomotive MK0",
     "yir_us_cargo": "MK0 Freight Car",
+    "hiend_loco": "Maglev locomotive",
+    "hiend_wagon": "Maglev cargo wagon",
+    "hiend_fluid_wagon": "Maglev fluid wagon",
+    "super_charger": "Battery charger MK4",
     "offshore-mk0-pump": "Burner Pump",
     "offshore-pump": "Electric Offshore Pump",
     "offshore-mk2-pump": "Electric Offshore Pump MK2",
@@ -124,7 +132,9 @@
     "chrome-ore-refining": "Chrome ore refining",
     "manganese-ore-refining": "Manganese ore refining",
     "angels-alloys-smelting": "Advanced Alloys Smelting",
-    "angels-ironworks": "Advanced Ironworks"
+    "angels-ironworks": "Advanced Ironworks",
+    "hiend_train": "Maglev trains",
+    "super_charger": "Battery charger MK4"
   },
   "technology-description": {
     "alien-artifact": "Technology that allows alien artifacts to be fused and transmuted into other species.",
@@ -133,7 +143,9 @@
     "offshore-mk3-pump": "Cool Electric Offshore Pump",
     "offshore-mk4-pump": "Best Electric Offshore Pump",
     "angels-alloys-smelting": "Advanced steps for the production of alloy sheet coils (gunmetal, invar, cobalt-steel).",
-    "angels-ironworks": "Cast gear wheels directly from molten metal using sand or metal dies."
+    "angels-ironworks": "Cast gear wheels directly from molten metal using sand or metal dies.",
+    "hiend_train": "Magnetic levitation allows trains to reach enormous speeds.",
+    "super_charger": "Faster chargers for locomotive battery packs."
   },
   "mod-setting-name": {
     "paranoidal-miniloader-energy-multiplier": "Miniloaders energy usage multiplier",

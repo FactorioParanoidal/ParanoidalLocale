@@ -61,7 +61,6 @@
     "angels-roll-steel": "Стальной рулон",
     "angels-rod-steel": "Стальной прут",
     "angels-rod-stack-steel": "Связка стальных прутов",
-    "angels-solder-mixture": "Припойный порошок",
     "angels-solder": "Припой",
     "angels-roll-solder": "Катушка припоя",
     "angels-plate-tin": "Оловянный слиток",
@@ -108,7 +107,6 @@
     "angels-tungsten-smelting": "Улучшенная переплавка вольфрама",
     "angels-zinc-smelting": "Улучшенная переплавка цинка",
     "angels-steel-smelting": "Улучшенная переплавка стали",
-    "angels-solder-smelting-basic": "Простое изготовление припоя",
     "angels-solder-smelting": "Улучшенное сплавление припоя",
     "angels-bronze-smelting": "Улучшенное сплавление бронзы",
     "angels-brass-smelting": "Улучшенное сплавление латуни",
@@ -120,8 +118,7 @@
     "bob-steel-mixing-furnace": "Стальная печь для сплавов",
     "bob-fluid-mixing-furnace": "Жидкотопливная печь для сплавов",
     "bob-electric-mixing-furnace": "Электропечь для сплавов",
-    "bob-alloy-processing": "Изготовление сплавов",
-    "bob-zinc-processing": "Производство цинка"
+    "bob-alloy-processing": "Изготовление сплавов"
   },
   "technology-description": {
     "angels-metallurgy": "Металлургия",
@@ -145,7 +142,6 @@
     "angels-tungsten-smelting": "Улучшенная переплавка вольфрама",
     "angels-zinc-smelting": "Улучшенная переплавка цинка",
     "angels-steel-smelting": "Улучшенная переплавка стали",
-    "angels-solder-smelting-basic": "Простое изготовление припоя",
     "angels-solder-smelting": "Улучшенное сплавление припоя",
     "angels-bronze-smelting": "Улучшенное сплавление бронзы",
     "angels-brass-smelting": "Улучшенное сплавление латуни",
