@@ -99,7 +99,6 @@
     "super_charger": "Более быстрые зарядные устройства для аккумуляторных блоков электровоза."
   },
   "mod-setting-name": {
-    "paranoidal-miniloader-energy-multiplier": "Множитель энергопотребления минипогрузчиков",
     "paranoidal-flowfix-min-time": "Минимальное время для рецептов с продуктивностью",
     "paranoidal-disable-vanilla-evolution": "Отключить ванильную эволюцию",
     "stone-path-concrete": "Включить: Новое покрытие для кирпича",
@@ -115,7 +114,6 @@
     "zzz-settings": "Как включить тонкие настройки PARANOIDAL"
   },
   "mod-setting-description": {
-    "paranoidal-miniloader-energy-multiplier": "Энергопотребление всех минипогрузчиков будет равно заданному в моде \"miniloaders\", умноженному на этот коэффициент.",
     "paranoidal-flowfix-min-time": "Рецепты с меньшим временем будут пропорционально увелечены по времени,входным ресурсам и продукции",
     "paranoidal-disable-vanilla-evolution": "Принудительно выключает стандартную эволюцию жуков при создании карты. Будет действовать только эволюция по исследованиям.",
     "stone-path-concrete": "Включает замену стандартной графики на графику из мода Concretexture",
