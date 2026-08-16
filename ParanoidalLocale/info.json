@@ -1,6 +1,6 @@
 {
   "name": "ParanoidalLocale",
-  "version": "1.17.0",
+  "version": "1.18.0",
   "factorio_version": "2.0",
   "title": "PARANOIDAL Locale",
   "author": "SKProCH",
@@ -40,7 +40,6 @@
     "? Nearby-Ammo-Count-Bigger",
     "? Noxys_Trees",
     "? Orphan Finder",
-    "? OverloadedTrains-Dead2",
     "? PCPRedux",
     "? Pi-C_lib",
     "? Picks-Inserter",
