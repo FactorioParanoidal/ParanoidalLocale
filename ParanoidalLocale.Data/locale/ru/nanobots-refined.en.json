@@ -47,6 +47,8 @@
   "virtual-signal-description": {
     "nano-signal-item-on-ground": "Помечает вещи на земле"
   },
+  "fluid-name": {},
+  "fluid-description": {},
   "equipment-name": {
     "equipment-bot-chip-items": "Автоматический возврат вещей",
     "equipment-bot-chip-trees": "Автоматический термит",
