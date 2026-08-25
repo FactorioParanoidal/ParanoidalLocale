@@ -32,7 +32,7 @@
     "hiend_loco": "Maglev locomotive",
     "hiend_wagon": "Maglev cargo wagon",
     "hiend_fluid_wagon": "Maglev fluid wagon",
-    "super_charger": "Battery charger MK4",
+    "super_charger": "Battery pack charger 4",
     "flame_car": "Flamethrower Car"
   },
   "item-description": {
@@ -82,7 +82,7 @@
     "hiend_loco": "Maglev locomotive",
     "hiend_wagon": "Maglev cargo wagon",
     "hiend_fluid_wagon": "Maglev fluid wagon",
-    "super_charger": "Battery charger MK4",
+    "super_charger": "Battery pack charger 4",
     "offshore-mk0-pump": "Burner Pump",
     "offshore-pump": "Electric Offshore Pump",
     "offshore-mk2-pump": "Electric Offshore Pump MK2",
@@ -122,7 +122,7 @@
     "angels-alloys-smelting": "Advanced Alloys Smelting",
     "angels-ironworks": "Advanced Ironworks",
     "hiend_train": "Maglev trains",
-    "super_charger": "Battery charger MK4",
+    "super_charger": "Battery pack charger 4",
     "flame_car": "Flamethrower Car"
   },
   "technology-description": {
