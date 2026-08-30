@@ -1,0 +1,14 @@
+{
+  "item-name": {
+    "angels-iron-gear-wheel-stack": "Заготовка железных шестерен",
+    "angels-steel-gear-wheel-stack": "Заготовка стальных шестерен"
+  },
+  "recipe-name": {
+    "angels-iron-gear-wheel-stack-casting": "Выплавка заготовок железных шестерен",
+    "angels-iron-gear-wheel-stack-casting-fast": "Улучшенная выплавка заготовок железных шестерен",
+    "angels-iron-gear-wheel-stack-converting": "Распил заготовок на железные шестерни",
+    "angels-steel-gear-wheel-stack-casting": "Выплавка заготовок стальных шестерен",
+    "angels-steel-gear-wheel-stack-casting-fast": "Улучшенная выплавка заготовок стальных шестерен",
+    "angels-steel-gear-wheel-stack-converting": "Распил заготовок на стальные шестерни"
+  }
+}
