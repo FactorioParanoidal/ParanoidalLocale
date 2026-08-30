@@ -25,25 +25,6 @@ jobs:
         with:
           dotnet-version: 10.0.x
 
-      # Pull first so a stale repository copy cannot overwrite approved Crowdin work.
-      - name: Download approved translations before extraction
-        uses: crowdin/github-action@v2
-        with:
-          upload_sources: false
-          upload_translations: false
-          download_translations: true
-          export_only_approved: true
-          skip_untranslated_strings: true
-          push_sources: false
-          push_translations: false
-          create_pull_request: false
-        env:
-          CROWDIN_PROJECT_ID: ${{ secrets.CROWDIN_PROJECT_ID }}
-          CROWDIN_PERSONAL_TOKEN: ${{ secrets.CROWDIN_PERSONAL_TOKEN }}
-
-      - name: Fix downloaded locale ownership
-        run: sudo chown -R "$(id -u):$(id -g)" ParanoidalLocale.Data/locale
-
       - name: Extract current mod sources and local translations
         run: ./build.sh ExtractLocalizationToJsons
 
@@ -53,11 +34,24 @@ jobs:
       - name: Validate extracted locales
         run: ./build.sh ValidateLocales
 
-      - name: Upload sources and import Russian translations
+      - name: Upload current sources and remove obsolete Crowdin files
         uses: crowdin/github-action@v2
         with:
           upload_sources: true
           upload_sources_args: --delete-obsolete
+          upload_translations: false
+          download_translations: false
+          push_sources: false
+          push_translations: false
+          create_pull_request: false
+        env:
+          CROWDIN_PROJECT_ID: ${{ secrets.CROWDIN_PROJECT_ID }}
+          CROWDIN_PERSONAL_TOKEN: ${{ secrets.CROWDIN_PERSONAL_TOKEN }}
+
+      - name: Import current Russian translations
+        uses: crowdin/github-action@v2
+        with:
+          upload_sources: false
           upload_translations: true
           upload_language: ru
           auto_approve_imported: true
@@ -103,7 +97,7 @@ jobs:
         uses: peter-evans/create-pull-request@v7
         with:
           token: ${{ secrets.LOCALE_SYNC_TOKEN }}
-          branch: automation/crowdin-locales
+          branch: automation/crowdin-locales-v2
           delete-branch: true
           commit-message: 'Synchronize locales with Crowdin'
           title: 'Synchronize locales with Crowdin'
