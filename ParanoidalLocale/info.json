@@ -1,6 +1,6 @@
 {
   "name": "ParanoidalLocale",
-  "version": "1.23.0",
+  "version": "1.24.0",
   "factorio_version": "2.0",
   "title": "PARANOIDAL Locale",
   "author": "SKProCH",
@@ -90,7 +90,6 @@
     "? Noxys_Trees",
     "? Orphan Finder",
     "? osha_mini_containers",
-    "? ParanoidalLocale",
     "? PCPRedux",
     "? Pi-C_lib",
     "? Picks-Inserter",
