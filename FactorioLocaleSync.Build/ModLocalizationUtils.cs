@@ -86,7 +86,11 @@ public static class ModLocalizationUtils
 
     public static void SyncDependentMods(IEnumerable<ModInfo> mods, AbsolutePath path)
     {
-        var names = mods.Select(info => info.InfoJson.InternalName).OrderBy(x => x).ToHashSet();
+        var names = mods
+            .Where(info => info.InfoJson.InternalName != "ParanoidalLocale")
+            .Select(info => info.InfoJson.InternalName)
+            .OrderBy(x => x)
+            .ToHashSet();
         File.WriteAllText(path, JsonSerializer.Serialize(names, JsonSerializerOptions));
     }
 

@@ -49,7 +49,9 @@ partial class Build : NukeBuild
         {
             var modsFolder = ParanoidalDirectory / "mods";
             Log.Information("Starting mods discovery in {TargetFolder}", modsFolder);
-            var modInfos = ModInfo.GetMods(modsFolder).ToList();
+            var modInfos = ModInfo.GetMods(modsFolder)
+                .Where(info => info.InfoJson.InternalName != "ParanoidalLocale")
+                .ToList();
             Log.Information("Found {ModCount} mods", modInfos.Count);
 
             Log.Information("Processing mods, target locale {TargetLocale}:", TargetLocale);
