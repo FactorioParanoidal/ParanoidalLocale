@@ -92,6 +92,17 @@ jobs:
       - name: Validate downloaded locales
         run: ./build.sh ValidateLocales
 
+      - name: Reject translations moved into source directory
+        shell: bash
+        run: |
+          invalid_renames=$(git diff --name-status --find-renames -- ParanoidalLocale.Data/locale \
+            | awk '$1 ~ /^R/ && $2 !~ /\/initial\// && $3 ~ /\/initial\// { print }')
+          if [[ -n "$invalid_renames" ]]; then
+            echo "Crowdin produced invalid translation-to-source renames:"
+            echo "$invalid_renames"
+            exit 1
+          fi
+
       - name: Create or update synchronization pull request
         id: create-pr
         uses: peter-evans/create-pull-request@v7
