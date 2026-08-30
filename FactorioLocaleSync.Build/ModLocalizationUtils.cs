@@ -1,5 +1,6 @@
 #nullable enable
 #pragma warning disable CS8620 // Argument cannot be used for parameter due to differences in the nullability of reference types.
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -303,6 +304,90 @@ public static class ModLocalizationUtils
             logger?.Debug("Writing {FileName} with {SectionsCount} sections and {KeysCount} keys",
                 fromFileNameWithoutExtension, dictionary.Count, keysCount);
             ExportDictionaryToCfgFile(dictionary, fromFileNameWithoutExtension);
+        }
+    }
+
+    public static void ValidateLocaleFiles(AbsolutePath localizationsFolder, ILogger? logger)
+    {
+        var initialFolder = localizationsFolder / "initial";
+        if (!initialFolder.DirectoryExists())
+            throw new InvalidOperationException($"Source locale directory does not exist: {initialFolder}");
+
+        var sourceFiles = initialFolder.GlobFiles("*.json")
+            .ToDictionary(file => file.Name, ReadLocaleFile);
+        foreach (var localeFolder in Directory.EnumerateDirectories(localizationsFolder)
+                     .Where(path => Path.GetFileName(path) != "initial"))
+        foreach (var translationFile in ((AbsolutePath)localeFolder).GlobFiles("*.json"))
+        {
+            if (!sourceFiles.TryGetValue(translationFile.Name, out var source))
+                throw new InvalidOperationException(
+                    $"Translation file has no source file: {translationFile}");
+
+            var translation = ReadLocaleFile(translationFile);
+            foreach (var (sectionName, keys) in translation)
+            {
+                if (!source.TryGetValue(sectionName, out var sourceSection))
+                    throw new InvalidOperationException($"Unknown section [{sectionName}] in {translationFile}");
+
+                foreach (var (key, value) in keys)
+                {
+                    if (string.IsNullOrWhiteSpace(value))
+                        throw new InvalidOperationException(
+                            $"Empty translation [{sectionName}] {key} in {translationFile}");
+                    if (!sourceSection.ContainsKey(key))
+                        throw new InvalidOperationException(
+                            $"Unknown key [{sectionName}] {key} in {translationFile}");
+                }
+            }
+        }
+
+        logger?.Information("Validated {SourceFilesCount} source locale files", sourceFiles.Count);
+    }
+
+    public static void CleanLocaleFiles(AbsolutePath localizationsFolder, ILogger? logger)
+    {
+        var initialFolder = localizationsFolder / "initial";
+        var sourceFiles = initialFolder.GlobFiles("*.json")
+            .ToDictionary(file => file.Name, ReadLocaleFile);
+
+        foreach (var localeFolderPath in Directory.EnumerateDirectories(localizationsFolder)
+                     .Where(path => Path.GetFileName(path) != "initial"))
+        {
+            var localeFolder = (AbsolutePath)localeFolderPath;
+            foreach (var translationFile in localeFolder.GlobFiles("*.json"))
+            {
+                if (!sourceFiles.TryGetValue(translationFile.Name, out var source))
+                {
+                    logger?.Information("Deleting stale {Locale} file {File}", Path.GetFileName(localeFolderPath),
+                        translationFile);
+                    File.Delete(translationFile);
+                    continue;
+                }
+
+                var translation = ReadLocaleFile(translationFile);
+                var cleaned = translation
+                    .Where(section => source.TryGetValue(section.Key, out var sourceSection))
+                    .ToDictionary(
+                        section => section.Key,
+                        section => (IDictionary<string, string>)section.Value
+                            .Where(pair => source[section.Key].ContainsKey(pair.Key)
+                                           && !string.IsNullOrWhiteSpace(pair.Value))
+                            .ToDictionary(pair => pair.Key, pair => pair.Value));
+                WriteOrDeleteIfEmpty(cleaned, translationFile, logger);
+            }
+        }
+    }
+
+    static Dictionary<string, Dictionary<string, string>> ReadLocaleFile(AbsolutePath file)
+    {
+        try
+        {
+            return JsonSerializer.Deserialize<Dictionary<string, Dictionary<string, string>>>(File.ReadAllText(file))
+                   ?? throw new InvalidOperationException("File is empty JSON null");
+        }
+        catch (JsonException e)
+        {
+            throw new InvalidOperationException($"Invalid locale JSON: {file}", e);
         }
     }
 

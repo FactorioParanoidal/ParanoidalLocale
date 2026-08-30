@@ -17,16 +17,18 @@
         "TeamCity",
         "Terminal",
         "TravisCI",
-        "VSCode",
-        "VisualStudio"
+        "VisualStudio",
+        "VSCode"
       ]
     },
     "ExecutableTarget": {
       "type": "string",
       "enum": [
+        "CleanLocaleFiles",
         "CloneParanoidalRepository",
         "ExtractLocalizationToJsons",
-        "UpdateAndPackMod"
+        "UpdateAndPackMod",
+        "ValidateLocales"
       ]
     },
     "Verbosity": {

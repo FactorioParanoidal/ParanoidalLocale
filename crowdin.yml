@@ -1,3 +1,8 @@
+project_id_env: CROWDIN_PROJECT_ID
+api_token_env: CROWDIN_PERSONAL_TOKEN
+preserve_hierarchy: true
+
 files:
   - source: /ParanoidalLocale.Data/locale/initial/*.json
     translation: /ParanoidalLocale.Data/locale/%two_letters_code%/%original_file_name%
+    update_option: update_as_unapproved

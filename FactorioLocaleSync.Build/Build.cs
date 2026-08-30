@@ -1,5 +1,6 @@
 #nullable enable
 using System;
+using System.IO;
 using System.Linq;
 using FactorioLocaleSync.Library.Mods;
 using Nuke.Common;
@@ -87,16 +88,23 @@ partial class Build : NukeBuild
         .Executes(() =>
         {
             var modDirectory = RootDirectory / "ParanoidalLocale";
-            var targetLocaleDirectory = modDirectory / "locale" / TargetLocale;
-            var oldLocalesHash = targetLocaleDirectory.GetDirectoryHash();
+            var targetLocalesDirectory = modDirectory / "locale";
+            var oldLocalesHash = targetLocalesDirectory.GetDirectoryHash();
             Log.Information("Old locales hash: {OldLocalesHash}", oldLocalesHash);
 
-            targetLocaleDirectory.CreateOrCleanDirectory();
-            Log.Information("Writing files content to {TargetFolder}", targetLocaleDirectory);
-            var fromDirectory = LocalizationsFolder / TargetLocale;
-            ModLocalizationUtils.ExportDictionaryJsonsToFactorioCfg(fromDirectory, targetLocaleDirectory, Log.Logger);
+            targetLocalesDirectory.CreateOrCleanDirectory();
+            foreach (var sourceLocaleDirectory in Directory.EnumerateDirectories(LocalizationsFolder)
+                         .Where(path => Path.GetFileName(path) != "initial"))
+            {
+                var localeName = Path.GetFileName(sourceLocaleDirectory);
+                var targetLocaleDirectory = targetLocalesDirectory / localeName;
+                targetLocaleDirectory.CreateDirectory();
+                Log.Information("Writing {LocaleName} files to {TargetFolder}", localeName, targetLocaleDirectory);
+                ModLocalizationUtils.ExportDictionaryJsonsToFactorioCfg(sourceLocaleDirectory, targetLocaleDirectory,
+                    Log.Logger);
+            }
 
-            var newLocalesHash = targetLocaleDirectory.GetDirectoryHash();
+            var newLocalesHash = targetLocalesDirectory.GetDirectoryHash();
             Log.Information("New locales hash: {NewLocalesHash}", newLocalesHash);
 
             var dependenciesJsonPath = LocalizationsFolder / "dependencies.json";
@@ -130,6 +138,20 @@ partial class Build : NukeBuild
             var modZipPath = TemporaryDirectory / $"ParanoidalLocale_{infoJson.Version}.zip";
             Log.Information("Packing mod to {ModZipPath}", modZipPath);
             Zip(modZipPath, modDirectory);
+        });
+
+    Target ValidateLocales => _ => _
+        .Executes(() =>
+        {
+            Log.Information("Validating localization files in {LocalizationsFolder}", LocalizationsFolder);
+            ModLocalizationUtils.ValidateLocaleFiles(LocalizationsFolder, Log.Logger);
+        });
+
+    Target CleanLocaleFiles => _ => _
+        .Executes(() =>
+        {
+            Log.Information("Cleaning stale localization files in {LocalizationsFolder}", LocalizationsFolder);
+            ModLocalizationUtils.CleanLocaleFiles(LocalizationsFolder, Log.Logger);
         });
 
     /// Support plugins are available for:

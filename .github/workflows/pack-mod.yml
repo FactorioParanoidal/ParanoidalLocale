@@ -8,6 +8,10 @@ on:
     branches: [ main ]
   workflow_dispatch:
 
+concurrency:
+  group: locale-package-main
+  cancel-in-progress: false
+
 permissions:
   contents: write
 
@@ -23,6 +27,12 @@ jobs:
 
       - name: Mark workspace as safe for git
         run: git config --global --add safe.directory '*'
+
+      - name: Validate locales
+        run: ./build.sh CleanLocaleFiles
+
+      - name: Validate cleaned locales
+        run: ./build.sh ValidateLocales
 
       - name: Update and pack mod
         run: ./build.sh UpdateAndPackMod

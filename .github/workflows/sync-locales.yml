@@ -1,0 +1,110 @@
+name: Synchronize locales with Crowdin
+
+on:
+  schedule:
+    - cron: '0 0 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: locale-sync
+  cancel-in-progress: false
+
+jobs:
+  synchronize:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 10.0.x
+
+      # Pull first so a stale repository copy cannot overwrite approved Crowdin work.
+      - name: Download approved translations before extraction
+        uses: crowdin/github-action@v2
+        with:
+          upload_sources: false
+          upload_translations: false
+          download_translations: true
+          export_only_approved: true
+          skip_untranslated_strings: true
+          skip_untranslated_files: true
+          push_sources: false
+          push_translations: false
+          create_pull_request: false
+        env:
+          CROWDIN_PROJECT_ID: ${{ secrets.CROWDIN_PROJECT_ID }}
+          CROWDIN_PERSONAL_TOKEN: ${{ secrets.CROWDIN_PERSONAL_TOKEN }}
+
+      - name: Extract current mod sources and local translations
+        run: ./build.sh ExtractLocalizationToJsons
+
+      - name: Remove stale local translation files and keys
+        run: ./build.sh CleanLocaleFiles
+
+      - name: Validate extracted locales
+        run: ./build.sh ValidateLocales
+
+      - name: Upload sources and import Russian translations
+        uses: crowdin/github-action@v2
+        with:
+          upload_sources: true
+          upload_sources_args: --delete-obsolete
+          upload_translations: true
+          upload_language: ru
+          auto_approve_imported: true
+          import_eq_suggestions: true
+          download_translations: false
+          push_sources: false
+          push_translations: false
+          create_pull_request: false
+        env:
+          CROWDIN_PROJECT_ID: ${{ secrets.CROWDIN_PROJECT_ID }}
+          CROWDIN_PERSONAL_TOKEN: ${{ secrets.CROWDIN_PERSONAL_TOKEN }}
+
+      # Crowdin does not remove obsolete local export files itself.
+      - name: Remove previous translation exports
+        run: find ParanoidalLocale.Data/locale -mindepth 1 -maxdepth 1 -type d ! -name initial -exec rm -rf {} +
+
+      - name: Download approved translations
+        uses: crowdin/github-action@v2
+        with:
+          upload_sources: false
+          upload_translations: false
+          download_translations: true
+          export_only_approved: true
+          skip_untranslated_strings: true
+          skip_untranslated_files: true
+          push_sources: false
+          push_translations: false
+          create_pull_request: false
+        env:
+          CROWDIN_PROJECT_ID: ${{ secrets.CROWDIN_PROJECT_ID }}
+          CROWDIN_PERSONAL_TOKEN: ${{ secrets.CROWDIN_PERSONAL_TOKEN }}
+
+      - name: Validate downloaded locales
+        run: ./build.sh ValidateLocales
+
+      - name: Create or update synchronization pull request
+        id: create-pr
+        uses: peter-evans/create-pull-request@v7
+        with:
+          token: ${{ secrets.LOCALE_SYNC_TOKEN }}
+          branch: automation/crowdin-locales
+          delete-branch: true
+          commit-message: 'Synchronize locales with Crowdin'
+          title: 'Synchronize locales with Crowdin'
+          body: 'Automated source, approved translation, and obsolete-file synchronization.'
+          labels: localization, automated
+
+      - name: Enable auto-merge
+        if: steps.create-pr.outputs.pull-request-operation == 'created' || steps.create-pr.outputs.pull-request-operation == 'updated'
+        run: gh pr merge "${{ steps.create-pr.outputs.pull-request-url }}" --auto --merge
+        env:
+          GH_TOKEN: ${{ secrets.LOCALE_SYNC_TOKEN }}
