@@ -64,10 +64,6 @@ jobs:
           CROWDIN_PROJECT_ID: ${{ secrets.CROWDIN_PROJECT_ID }}
           CROWDIN_PERSONAL_TOKEN: ${{ secrets.CROWDIN_PERSONAL_TOKEN }}
 
-      # Crowdin does not remove obsolete local export files itself.
-      - name: Remove previous translation exports
-        run: find ParanoidalLocale.Data/locale -mindepth 1 -maxdepth 1 -type d ! -name initial -exec rm -rf {} +
-
       - name: Download approved translations
         uses: crowdin/github-action@v2
         with:
@@ -95,11 +91,18 @@ jobs:
       - name: Reject translations moved into source directory
         shell: bash
         run: |
-          invalid_renames=$(git diff --name-status --find-renames -- ParanoidalLocale.Data/locale \
+          invalid_renames=$(git diff HEAD --name-status --find-renames -- ParanoidalLocale.Data/locale \
             | awk '$1 ~ /^R/ && $2 !~ /\/initial\// && $3 ~ /\/initial\// { print }')
           if [[ -n "$invalid_renames" ]]; then
             echo "Crowdin produced invalid translation-to-source renames:"
             echo "$invalid_renames"
+            exit 1
+          fi
+
+          translation_deletions=$(git diff HEAD --name-status -- ParanoidalLocale.Data/locale \
+            | awk '$1 == "D" && $2 ~ /\/locale\/(ru|uk)\// { count++ } END { print count + 0 }')
+          if (( translation_deletions > 20 )); then
+            echo "Refusing to create a PR with $translation_deletions deleted translation files."
             exit 1
           fi
 
