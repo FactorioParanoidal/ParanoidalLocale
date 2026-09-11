@@ -20,7 +20,7 @@
     "xp_unitk": "Units killed: __1__",
     "xp_costbt": "Cost: __1__",
     "xp_reset_altert": "ALERT: XP WAS RESET FOR ALL PLAYERS.",
-    "xp_opt_Pick_Extender": "Use Reach distance to pick up items from the floor",
+    "xp_opt_Pick_Extender": "Use Reach distance to pick up items from the floor.",
     "player_tag": "Player tag",
     "feel_better": "You feel better now...",
     "feel_strange": "You feel strange... you don't even know where you are... What is it you just drunk?",
@@ -59,7 +59,8 @@
     "LV_Armor_Bonus": "Armor",
     "LV_Damage_Bonus": "Damage",
     "LV_Damage_Critical": "Critical",
-    "LV_Magic": "Magic"
+    "LV_Magic": "Magic",
+    "LV_Info": "Console info"
   },
   "xp_hint_global.personalxp": {
     "LV_Craft_Speed": "Each level increases crafting speed by __1__%. Current: __2__%",
@@ -74,7 +75,8 @@
     "LV_Armor_Bonus": "Each level increases player's natural armor by __1__%. Current: __2__%",
     "LV_Damage_Bonus": "Each level increases player's damage bonus by __1__%. Current: __2__%",
     "LV_Damage_Critical": "Each level increases player's chance to a critical hit by __1__%. Current: __2__%",
-    "LV_Magic": "Each level increases player's magic chance by __1__%. Current: __2__%"
+    "LV_Magic": "Each level increases player's magic chance by __1__%. Current: __2__%",
+    "LV_Info": "[color=255,0,0][font=default-bold]You can use these commands in console (free for achievement):[/font][/color]\\n/rpg-players-list = list all players \\n/rpg-reset-points = reset all points (all xp and level stay)\\n/rpg-reset-all = DELETE all xp and level\\n/rpg-listXPTable = print the first levels of the XP Table"
   },
   "mod-setting-name": {
     "charxpmod_xpinilevel": "First level XP",
@@ -118,8 +120,8 @@
     "charxpmod_time_ratio_xp": "Proportional XP is given to a player based in his played time",
     "charxpmod_print_xp_user": "Print all XP earned as chat messages",
     "charxpmod_xp_multiplier_bonus": "from 0.1 to 100.0",
-    "charxpmod_xp_maxlevel": "40-500 (default 100)",
-    "charxpmod_xp_maxlevel_ability": "10-50 (default 20)",
+    "charxpmod_xp_maxlevel": "40-200 (default 100)",
+    "charxpmod_xp_maxlevel_ability": "10-30 (default 20)",
     "charxpmod_enable_potion_loot": "If enabled, spawners may drop rpg potions as loot"
   },
   "controls": {
