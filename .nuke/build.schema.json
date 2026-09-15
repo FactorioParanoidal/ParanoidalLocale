@@ -17,8 +17,8 @@
         "TeamCity",
         "Terminal",
         "TravisCI",
-        "VSCode",
-        "VisualStudio"
+        "VisualStudio",
+        "VSCode"
       ]
     },
     "ExecutableTarget": {
